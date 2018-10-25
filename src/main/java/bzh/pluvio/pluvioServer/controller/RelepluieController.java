@@ -35,7 +35,7 @@ import bzh.pluvio.pluvioServer.repo.RelevepluieRepository;
 import bzh.pluvio.pluvioServer.repo.TotalByMonthByYearRepository;
 import bzh.pluvio.pluvioServer.repo.ValuesByYearRepository;
 
-//@CrossOrigin(origins = { "http://192.168.1.98" }, maxAge = 3000)
+//@CrossOrigin(origins = *, maxAge = 3000)
 @RestController
 @RequestMapping("pluvio")
 public class RelepluieController {
