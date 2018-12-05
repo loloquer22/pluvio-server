@@ -13,8 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,7 +33,6 @@ import bzh.pluvio.pluvioServer.repo.RelevepluieRepository;
 import bzh.pluvio.pluvioServer.repo.TotalByMonthByYearRepository;
 import bzh.pluvio.pluvioServer.repo.ValuesByYearRepository;
 
-@CrossOrigin(origins = *, maxAge = 3000)
 @RestController
 @RequestMapping("pluvio")
 public class RelepluieController {
@@ -72,9 +69,9 @@ public class RelepluieController {
 
 		relevepluies.forEach(list::add);
 		
-		HttpHeaders responseHeaders = new HttpHeaders();
-		responseHeaders.set( "Access-Control-Allow-Origin", "*");
-		logger.info(" ** Relevepluie by date **" + responseHeaders); 
+//		HttpHeaders responseHeaders = new HttpHeaders();
+//		responseHeaders.set( "Access-Control-Allow-Origin", "*");
+//		logger.info(" ** Relevepluie by date **" + responseHeaders); 
 		
 		return list;
 	}
@@ -134,10 +131,11 @@ public class RelepluieController {
 		public ResponseEntity<List<RelevepluieByDate>> getRelevepluieByDate(@PathVariable(value = "date") String date) throws ParseException{
 		List<RelevepluieByDate> relevepluieByDate = relevepluieByDateRepository.getRelevepluieByDate(date);
 		logger.info(" ** Relevepluie by date **" + date + " ** number date find :" + relevepluieByDate.size());
-		HttpHeaders responseHeaders = new HttpHeaders();
-		responseHeaders.set( "Access-Control-Allow-Origin", "*");
-		logger.info(" ** Relevepluie by date **" + responseHeaders);
-		ResponseEntity<List<RelevepluieByDate>> reByDate= new ResponseEntity<List<RelevepluieByDate>>(relevepluieByDate, responseHeaders, HttpStatus.OK);
+		
+//		HttpHeaders responseHeaders = new HttpHeaders();
+//		responseHeaders.set( "Access-Control-Allow-Origin", "*");
+//		logger.info(" ** Relevepluie by date **" + responseHeaders);
+		ResponseEntity<List<RelevepluieByDate>> reByDate= new ResponseEntity<List<RelevepluieByDate>>(relevepluieByDate, HttpStatus.OK);
     
 		return reByDate;
 	}
@@ -147,10 +145,11 @@ public class RelepluieController {
 	public ResponseEntity<List<TotalByMonthByYear>> getTotalByMonthByYear(@PathVariable int annee) {
 		List<TotalByMonthByYear> totalByMonthByYear = totalByMonthByYearRepository.getTotalByMonthByYear(annee );
 
-		HttpHeaders responseHeaders = new HttpHeaders();
-		responseHeaders.set( "Access-Control-Allow-Origin", "*");
-		logger.info(" ** size list total By Month By Year **" + totalByMonthByYear.size() + " ** list Total By Month By Year **" + responseHeaders);
-		ResponseEntity<List<TotalByMonthByYear>> reTMY= new ResponseEntity<List<TotalByMonthByYear>>(totalByMonthByYear, responseHeaders, HttpStatus.OK);
+//		HttpHeaders responseHeaders = new HttpHeaders();
+//		responseHeaders.set( "Access-Control-Allow-Origin", "*");
+	
+		logger.info(" ** size list total By Month By Year **");
+		ResponseEntity<List<TotalByMonthByYear>> reTMY= new ResponseEntity<List<TotalByMonthByYear>>(totalByMonthByYear, HttpStatus.OK);
     
 		return reTMY;
 	}
