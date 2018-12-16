@@ -20,6 +20,7 @@ public class RelevepluieByDate {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Temporal(TemporalType.DATE)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", locale = "fr_FR", timezone = "UTC")
+	
 	private Date date;
 	private int valeur;
 	private int id;
