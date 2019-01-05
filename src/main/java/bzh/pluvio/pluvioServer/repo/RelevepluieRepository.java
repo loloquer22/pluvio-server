@@ -17,16 +17,5 @@ public interface RelevepluieRepository  extends CrudRepository<Relevepluie, Long
 	Relevepluie getLastValueRelevepluies();
 
 	Optional<Relevepluie> findById(long id);
-
-	
-//	@Query(value="SELECT id, date, valeur FROM relevepluie WHERE date =:date",nativeQuery=true)
-//	RelevepluieByDate getRelevepluieByDate(@Param("date") String date);
-	
-//	@Query("SELECT annee, SUM( valeur ) AS valeur FROM relevepluie WHERE annee group by annee")
-//	@Query(value="SELECT annee, valeur FROM relevepluie", nativeQuery=true)
-//	List<Relevepluie> getByYearRelevepluies();
-
-// http://zetcode.com/springboot/datajpaquery/	
-
 		
 }

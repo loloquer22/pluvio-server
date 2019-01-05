@@ -259,8 +259,7 @@ var map = {
 
 function webpackContext(req) {
 	var id = webpackContextResolve(req);
-	var module = __webpack_require__(id);
-	return module;
+	return __webpack_require__(id);
 }
 function webpackContextResolve(req) {
 	var id = map[req];
@@ -310,7 +309,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -321,7 +320,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  footer works!\n</p>\n"
+module.exports = "<p>\r\n  footer works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -373,7 +372,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
@@ -384,7 +383,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  app-graph works!\n</p>\n<div class=\"container\">\n<ngb-accordion #acc=\"ngbAccordion\" activeIds=\"config-panel-one\">\n  <ngb-panel title=\"2018\" id=\"config-panel-one\">\n    <ng-template ngbPanelContent>\n      <accordion-group heading=\"Année 2018\">\n        <div class=\"lineGraph\">\n          <div style=\"display: block;\">\n            <canvas baseChart width=\"800\" height=\"200\"\n              [datasets]=\"lineChartData2018\"\n              [labels]=\"lineChartLabels\"\n              [options]=\"lineChartOptions\"\n              [colors]=\"lineChartColors\"\n              [legend]=\"lineChartLegend\"\n              [chartType]=\"lineChartType\"\n              (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\">\n            </canvas>\n          </div>\n        </div>\n      </accordion-group>\n    </ng-template>\n  </ngb-panel>\n  <ngb-panel title=\"2017\">\n      <ng-template ngbPanelContent>\n        <accordion-group heading=\"Année 2017\">\n          <div class=\"lineGraph\">\n            <div style=\"display: block;\">\n              <canvas baseChart width=\"800\" height=\"200\"\n                [datasets]=\"lineChartData2017\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"lineChartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n              </canvas>\n            </div>\n          </div>\n        </accordion-group>\n      </ng-template>\n    </ngb-panel>\n  <ngb-panel title=\"2016\">\n      <ng-template ngbPanelContent>\n        <accordion-group heading=\"Année 2016\">\n          <div class=\"lineGraph\">\n            <div style=\"display: block;\">\n              <canvas baseChart width=\"800\" height=\"200\"\n                [datasets]=\"lineChartData2016\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"lineChartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n              </canvas>\n            </div>\n          </div>\n        </accordion-group>\n      </ng-template>\n    </ngb-panel>\n  <ngb-panel title=\"2015\">\n      <ng-template ngbPanelContent>\n        <accordion-group heading=\"Année 2015\">\n          <div class=\"lineGraph\">\n            <div style=\"display: block;\">\n              <canvas baseChart width=\"800\" height=\"200\"\n                [datasets]=\"lineChartData2015\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"lineChartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n              </canvas>\n            </div>\n          </div>\n        </accordion-group>\n      </ng-template>\n    </ngb-panel>\n  <ngb-panel title=\"2014\">\n      <ng-template ngbPanelContent>\n        <accordion-group heading=\"Année 2014\">\n          <div class=\"lineGraph\">\n            <div style=\"display: block;\">\n              <canvas baseChart width=\"800\" height=\"200\"\n                [datasets]=\"lineChartData2014\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"lineChartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n              </canvas>\n            </div>\n          </div>\n    </accordion-group>\n   </ng-template>\n  </ngb-panel>\n  <ngb-panel title=\"2013\">\n    <ng-template ngbPanelContent>\n      <accordion-group heading=\"Année 2013\">\n        <div class=\"lineGraph\">\n          <div style=\"display: block;\">\n            <canvas baseChart width=\"800\" height=\"200\"\n              [datasets]=\"lineChartData2013\"\n              [labels]=\"lineChartLabels\"\n              [options]=\"lineChartOptions\"\n              [colors]=\"lineChartColors\"\n              [legend]=\"lineChartLegend\"\n              [chartType]=\"lineChartType\"\n              (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\">\n            </canvas>\n          </div>\n        </div>\n      </accordion-group>\n    </ng-template>\n  </ngb-panel>\n  <ngb-panel title=\"2012\">\n    <ng-template ngbPanelContent>\n      <accordion-group heading=\"Année 2012\">\n        <div class=\"lineGraph\">\n          <div style=\"display: block;\">\n            <canvas baseChart width=\"800\" height=\"200\"\n              [datasets]=\"lineChartData2012\"\n              [labels]=\"lineChartLabels\"\n              [options]=\"lineChartOptions\"\n              [colors]=\"lineChartColors\"\n              [legend]=\"lineChartLegend\"\n              [chartType]=\"lineChartType\"\n              (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\">\n            </canvas>\n           </div>\n        </div>\n      </accordion-group>\n    </ng-template>\n  </ngb-panel>\n  <ngb-panel title=\"2011\">\n      <ng-template ngbPanelContent>\n        <accordion-group heading=\"Année 2011\">\n          <div class=\"lineGraph\">\n            <div style=\"display: block;\">\n              <canvas baseChart width=\"800\" height=\"200\"\n                [datasets]=\"lineChartData2011\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"lineChartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n              </canvas>\n            </div>\n          </div>\n        </accordion-group>\n      </ng-template>\n    </ngb-panel>\n  <ngb-panel title=\"2010\">\n      <ng-template ngbPanelContent>\n        <accordion-group heading=\"Année 2010\">\n          <div class=\"lineGraph\">\n            <div style=\"display: block;\">\n              <canvas baseChart width=\"800\" height=\"200\"\n                [datasets]=\"lineChartData2010\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"lineChartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n              </canvas>\n            </div>\n          </div>\n        </accordion-group>\n      </ng-template>\n    </ngb-panel>> \n  <ngb-panel title=\"2009\">\n      <ng-template ngbPanelContent>\n        <accordion-group heading=\"Année 2009\">\n          <div class=\"lineGraph\">\n            <div style=\"display: block;\">\n              <canvas baseChart width=\"800\" height=\"200\"\n                [datasets]=\"lineChartData2009\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"lineChartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n              </canvas>\n            </div>\n          </div>\n        </accordion-group>\n      </ng-template>\n    </ngb-panel>\n  <ngb-panel title=\"2008\">\n    <ng-template ngbPanelContent>\n      <accordion-group heading=\"Année 2008\">\n        <div class=\"lineGraph\">\n          <div style=\"display: block;\">\n            <canvas baseChart width=\"800\" height=\"200\"\n              [datasets]=\"lineChartData2008\"\n              [labels]=\"lineChartLabels\"\n              [options]=\"lineChartOptions\"\n              [colors]=\"lineChartColors\"\n              [legend]=\"lineChartLegend\"\n              [chartType]=\"lineChartType\"\n              (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\">\n            </canvas>\n          </div>\n        </div>\n      </accordion-group>\n    </ng-template>\n  </ngb-panel>\n  <ngb-panel title=\"2007\">\n    <ng-template ngbPanelContent>\n      <accordion-group heading=\"Année 2007\">\n        <div class=\"lineGraph\">\n          <div style=\"display: block;\">\n            <canvas baseChart width=\"800\" height=\"200\"\n              [datasets]=\"lineChartData2007\"\n              [labels]=\"lineChartLabels\"\n              [options]=\"lineChartOptions\"\n              [colors]=\"lineChartColors\"\n              [legend]=\"lineChartLegend\"\n              [chartType]=\"lineChartType\"\n              (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\">\n            </canvas>\n          </div>\n        </div>\n      </accordion-group>\n    </ng-template>\n  </ngb-panel>\n</ngb-accordion>\n</div>\n"
+module.exports = "\r\n  <h5 style=\"text-align: center;\" >Graphe mensuel par année</h5>\r\n\r\n<div class=\"container\">\r\n<ngb-accordion #acc=\"ngbAccordion\" activeIds=\"config-panel-one\">\r\n    <ngb-panel title=\"2019\"  id=\"config-panel-one\">\r\n        <ng-template ngbPanelContent>\r\n          <accordion-group heading=\"Année 2019\">\r\n            <div class=\"lineGraph\">\r\n              <div style=\"display: block;\">\r\n                <canvas baseChart width=\"800\" height=\"200\"\r\n                  [datasets]=\"lineChartData2019\"\r\n                  [labels]=\"lineChartLabels\"\r\n                  [options]=\"lineChartOptions\"\r\n                  [colors]=\"lineChartColors\"\r\n                  [legend]=\"lineChartLegend\"\r\n                  [chartType]=\"lineChartType\"\r\n                  (chartHover)=\"chartHovered($event)\"\r\n                  (chartClick)=\"chartClicked($event)\">\r\n                </canvas>\r\n              </div>\r\n            </div>\r\n          </accordion-group>\r\n        </ng-template>\r\n      </ngb-panel>\r\n  <ngb-panel title=\"2018\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2018\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2018\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2017\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2017\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2017\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2016\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2016\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2016\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2015\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2015\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2015\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2014\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2014\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2014\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n    </accordion-group>\r\n   </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2013\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2013\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2013\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2012\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2012\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2012\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n           </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2011\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2011\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2011\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2010\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2010\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2010\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>> \r\n  <ngb-panel title=\"2009\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2009\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2009\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2008\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2008\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2008\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2007\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2007\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2007\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n</ngb-accordion>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -415,6 +414,7 @@ var GraphComponent = /** @class */ (function () {
     //    values: ListYears[];
     function GraphComponent(restService) {
         this.restService = restService;
+        this.data2019 = new Array();
         this.data2018 = new Array();
         this.data2017 = new Array();
         this.data2016 = new Array();
@@ -428,6 +428,9 @@ var GraphComponent = /** @class */ (function () {
         this.data2008 = new Array();
         this.data2007 = new Array();
         // lineChart
+        this.lineChartData2019 = [
+            { data: this.data2019, label: 'Series 2019' },
+        ];
         this.lineChartData2018 = [
             { data: this.data2018, label: 'Series 2018' },
         ];
@@ -496,14 +499,20 @@ var GraphComponent = /** @class */ (function () {
         this.restService.getTotalByMonthByYear(this.year).subscribe(function (listTotalByMonthByYears) {
             //            listTotalByMonthByYears.forEach(listTotalByMonthByYears, function (value, key) {
             //            console.log( year, listTotalByMonthByYears );
+            if (2019 === year) {
+                for (var i = 0; i < listTotalByMonthByYears.length; i++) {
+                    _this.data2019.push(listTotalByMonthByYears[i].valeur);
+                    //                    console.log( ' *****' + this.data2019 );
+                }
+            }
             if (2018 === year) {
-                for (var i = 1; i < listTotalByMonthByYears.length; i++) {
-                    _this.data2017.push(listTotalByMonthByYears[i].valeur);
-                    //                    console.log( ' *****' + this.data2017 );
+                for (var i = 0; i < listTotalByMonthByYears.length; i++) {
+                    _this.data2018.push(listTotalByMonthByYears[i].valeur);
+                    //                    console.log( ' *****' + this.data2018 );
                 }
             }
             if (2017 === year) {
-                for (var i = 1; i < listTotalByMonthByYears.length; i++) {
+                for (var i = 0; i < listTotalByMonthByYears.length; i++) {
                     _this.data2017.push(listTotalByMonthByYears[i].valeur);
                     //                    console.log( ' *****' + this.data2017 );
                 }
@@ -562,7 +571,7 @@ var GraphComponent = /** @class */ (function () {
     };
     GraphComponent.prototype.ngOnInit = function () {
         this.getListYears();
-        this.getTotalByMonthByYear(this.year);
+        //   this.getTotalByMonthByYear( this.year );
     };
     // events
     GraphComponent.prototype.chartClicked = function (e) {
@@ -593,7 +602,7 @@ var GraphComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -657,7 +666,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\n  background-color: #00ff00;\r\n  height: 500px;\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  position: relative;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiRUFBRTtFQUNBLHNDQUE2RDtFQUM3RCwwQkFBMEI7RUFDMUIsY0FBYztFQUNkLDRCQUE0QjtFQUM1Qiw2QkFBNkI7RUFDN0IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtDQUNwQiIsImZpbGUiOiJhcHAtaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgIC5ob21lLWltYWdlIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCJhc3NldHMvaW1hZ2VzL2Nhcm91c2VsL0RTQ18wMjQ2LkpQR1wiKTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBmZjAwO1xyXG4gIGhlaWdodDogNTAwcHg7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -668,7 +677,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<section class=\"container\">\n\n    <div style=\"width: 50%; text-align: center;\">\n        <h5>Précipitations annuelles depuis 2007</h5>\n    </div>\n    <div class=\"barChart\"\n        style=\"width: 80%; height: 60%; display: inline-block; margin-top: 5%; margin-left: 0px\">\n        <canvas baseChart [datasets]=\"barChartData\"\n            [labels]=\"barChartLabels\" [options]=\"barChartOptions\"\n            [legend]=\"barChartLegend\" [colors]=\"barChartColors\"\n            [chartType]=\"barChartType\">\n        </canvas>\n    </div>\n\n <!--   <ul class=\"years\">\n        <li *ngFor=\"let year of years;\">\n               Annee: {{year.annee}}\n        </li>\n    </ul> -->\n</section>\n"
+module.exports = "\r\n<!-- <div class=\"home-image\"> -->\r\n<section class=\"container\">\r\n\r\n\t\r\n\t\t<div style=\"width: 86%; text-align: center;\">\r\n\t\t\t<h5>Précipitations annuelles depuis 2007</h5>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 60%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartData\" [labels]=\"barChartLabels\"\r\n\t\t\t\t[options]=\"barChartOptions\" [legend]=\"barChartLegend\"\r\n\t\t\t\t[colors]=\"barChartColors\" [chartType]=\"barChartType\">\r\n        \t</canvas>\r\n\t\t</div>\r\n\t\t\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 60%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartDataDay\" [labels]=\"barChartLabelsDay\"\r\n\t\t\t\t[options]=\"barChartOptionsDay\" [legend]=\"barChartLegendDay\"\r\n\t\t\t\t[colors]=\"barChartColorsDay\" [chartType]=\"barChartTypeDay\">\r\n        \t</canvas>\r\n\t\t</div>\r\n\r\n\r\n\r\n\t<!--   <ul class=\"years\">\r\n        <li *ngFor=\"let year of years;\">\r\n               Annee: {{year.annee}}\r\n        </li>\r\n    </ul> -->\r\n</section>\r\n<!-- </div> -->\r\n"
 
 /***/ }),
 
@@ -705,9 +714,11 @@ var HomeComponent = /** @class */ (function () {
         this.years = [];
         this.labels = [];
         this.dataValues = new Array();
+        this.labelsDay = [];
+        this.dataValuesDay = new Array();
         this.barChartLabels = this.labels;
         this.barChartType = 'bar';
-        this.barChartLegend = false;
+        this.Day = false;
         this.barChartOptions = '';
         this.chartHovered = '';
         this.chartClicked = '';
@@ -718,10 +729,25 @@ var HomeComponent = /** @class */ (function () {
         this.barChartData = [
             { dataValues: this.dataValues, label: 'Pluie en mm' },
         ];
+        this.barChartLabelsDay = this.labelsDay;
+        this.barChartTypeDay = 'bar';
+        this.barChartLegendDay = true;
+        this.barChartOptionsDay = '';
+        this.chartHoveredDay = '';
+        this.chartClickedDay = '';
+        this.barChartColorsDay = [{
+                backgroundColor: '#00BFFF',
+                hoverBackgroundColor: '#00008B'
+            }];
+        this.barChartDataDay = [
+            //                                  { labelsDay: this.labelsDay, label: 'Jour' },    
+            { dataValuesDay: this.dataValuesDay, label: 'Pluie par jour en mm' },
+        ];
     }
     HomeComponent.prototype.ngOnInit = function () {
         this.getListYear();
         this.getValuesByYear();
+        this.getValueByDayForMonthByYear();
     };
     HomeComponent.prototype.getListYear = function () {
         var _this = this;
@@ -743,6 +769,20 @@ var HomeComponent = /** @class */ (function () {
             }
             _this.barChartLabels = _this.labels;
             _this.barChartData = _this.dataValues;
+        });
+    };
+    HomeComponent.prototype.getValueByDayForMonthByYear = function () {
+        var _this = this;
+        this.rest.getvalueByDayForMonthByYear().subscribe(function (resultData) {
+            console.log(resultData);
+            _this.chartDataDay = [];
+            for (var i = 0; i < resultData.length; i++) {
+                _this.dataValuesDay.push(resultData[i].valeur);
+                _this.labelsDay.push((resultData[i].jour));
+                _this.chartDataDay.push([(resultData[i].jour), resultData[i].valeur]);
+            }
+            _this.barChartLabelsDay = _this.labelsDay;
+            _this.barChartDataDay = _this.dataValuesDay;
         });
     };
     HomeComponent = __decorate([
@@ -767,7 +807,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  width: 200px;\n}\n\n.mat-toolbar.mat-primary {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n"
+module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {\r\n  width: 200px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n  position: -webkit-sticky;\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1tYWluLW5hdi9tYWluLW5hdi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UseUJBQWlCO0VBQWpCLGlCQUFpQjtFQUNqQixPQUFPO0NBQ1IiLCJmaWxlIjoiYXBwLW1haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZW5hdi1jb250YWluZXIge1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLnNpZGVuYXYge1xyXG4gIHdpZHRoOiAyMDBweDtcclxufVxyXG5cclxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcclxuICBwb3NpdGlvbjogc3RpY2t5O1xyXG4gIHRvcDogMDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -778,7 +818,7 @@ module.exports = ".sidenav-container {\n  height: 100%;\n}\n\n.sidenav {\n  widt
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav\n    #drawer\n    class=\"sidenav\"\n    fixedInViewport=\"true\"\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\n    [opened]=\"!(isHandset$ | async)\">\n    <mat-toolbar color=\"primary\">{{title}}</mat-toolbar>\n    <mat-nav-list>\n      <a mat-list-item routerLink=\"/\">Accueil</a>\n      <a mat-list-item routerLink=\"/graph\">Graph</a>\n      <a mat-list-item routerLink=\"/relevepluie\">RelevePluie</a>\n      <a mat-list-item routerLink=\"/photos\">Photos</a>\n    </mat-nav-list>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <mat-toolbar color=\"primary\">\n      <button\n        type=\"button\"\n        aria-label=\"Toggle sidenav\"\n        mat-icon-button\n        (click)=\"drawer.toggle()\"\n        *ngIf=\"isHandset$ | async\">\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\n      </button>\n     <!--span>Application Title</span-->\n    </mat-toolbar>\n    <router-outlet></router-outlet>\n    <!-- Add Content Here -->\n  </mat-sidenav-content>\n</mat-sidenav-container>\n"
+module.exports = "<mat-sidenav-container class=\"sidenav-container\">\r\n  <mat-sidenav\r\n    #drawer\r\n    class=\"sidenav\"\r\n    fixedInViewport=\"true\"\r\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\r\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\r\n    [opened]=\"!(isHandset$ | async)\">\r\n    <mat-toolbar color=\"primary\">{{title}}</mat-toolbar>\r\n    <mat-nav-list>\r\n      <a mat-list-item routerLink=\"/\">Accueil</a>\r\n      <a mat-list-item routerLink=\"/graph\">Graph</a>\r\n      <a mat-list-item routerLink=\"/relevepluie\">RelevePluie</a>\r\n      <a mat-list-item routerLink=\"/photos\">Photos</a>\r\n    </mat-nav-list>\r\n  </mat-sidenav>\r\n  <mat-sidenav-content>\r\n    <mat-toolbar color=\"primary\">\r\n      <button\r\n        type=\"button\"\r\n        aria-label=\"Toggle sidenav\"\r\n        mat-icon-button\r\n        (click)=\"drawer.toggle()\"\r\n        *ngIf=\"isHandset$ | async\">\r\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\r\n      </button>\r\n     <!--span>Application Title</span-->\r\n    </mat-toolbar>\r\n    <router-outlet></router-outlet>\r\n    <!-- Add Content Here -->\r\n  </mat-sidenav-content>\r\n</mat-sidenav-container>\r\n"
 
 /***/ }),
 
@@ -836,7 +876,7 @@ var MainNavComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".relevepluie-dernierReleve{\r\n    text-align: center; \r\n  }"
+module.exports = "\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtcGhvdG9zL3Bob3Rvcy5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -847,7 +887,7 @@ module.exports = ".relevepluie-dernierReleve{\r\n    text-align: center; \r\n  }
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<h3 style=\"text-align: center;\" >Photos!</h3>\n\n"
+module.exports = "\r\n\r\n<h3 style=\"margin-top: 32px; text-align: center;\" >Photos!</h3>\r\n\r\n<div class=\"container\" style=\"width: 60%;\">\r\n<ngb-carousel>\r\n  <ng-template ngbSlide>\r\n    <img class=\"d-block w-100\"  src=\"assets/images/carousel/DSC_0193.JPG\"  alt=\"Random first slide\">\r\n    <div class=\"carousel-caption\">\r\n<!--       <h3>10 seconds between slides...</h3> -->\r\n      <p>Couché de soleil.</p>\r\n    </div>\r\n  </ng-template>\r\n  <ng-template ngbSlide >\r\n    <img class=\"d-block w-100\"  src=\"assets/images/carousel/DSC_0233.JPG\" alt=\"Random second slide\">\r\n    <div class=\"carousel-caption\">\r\n<!--       <h3>No mouse events...</h3> -->\r\n      <p>Couché de soleil en Irlande.</p>\r\n    </div>\r\n  </ng-template>\r\n  <ng-template ngbSlide>\r\n    <img class=\"d-block w-100\"  src=\"assets/images/carousel/DSC_0246.JPG\"  alt=\"Random third slide\" >\r\n    <div class=\"carousel-caption\">\r\n<!--       <h3>No keyboard...</h3> -->\r\n      <p>Un lac en Irlande.</p>\r\n    </div>\r\n  </ng-template>\r\n  <ng-template ngbSlide>\r\n    <img class=\"d-block w-100\"  src=\"assets/images/carousel/DSC_0953.JPG\" alt=\"Random fourth slide\" >\r\n    <div class=\"carousel-caption\">\r\n<!--       <h3>And no wrap after last slide.</h3> -->\r\n      <p>Cork.</p>\r\n    </div>\r\n  </ng-template>\r\n</ngb-carousel>\r\n</div>\r\n\r\n<!-- <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\"> -->\r\n<!--   <ol class=\"carousel-indicators\"> -->\r\n<!--     <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li> -->\r\n<!--     <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li> -->\r\n<!--     <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li> -->\r\n<!--   </ol> -->\r\n<!--   <div class=\"carousel-inner\"> -->\r\n<!--     <div class=\"carousel-item active\"> -->\r\n<!--       <img class=\"d-block w-100\" src=\"assets/images/carousel/DSC_0193.JPG\" alt=\"First slide\"> -->\r\n<!--     </div> -->\r\n<!--     <div class=\"carousel-item\"> -->\r\n<!--       <img class=\"d-block w-100\" src=\"assets/images/carousel/DSC_0233.JPG\" alt=\"Second slide\"> -->\r\n<!--     </div> -->\r\n<!--     <div class=\"carousel-item\"> -->\r\n<!--       <img class=\"d-block w-100\" src=\"assets/images/carousel/DSC_0.JPG\" alt=\"Third slide\"> -->\r\n<!--     </div> -->\r\n<!--   </div> -->\r\n<!--   <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\"> -->\r\n<!--     <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span> -->\r\n<!--     <span class=\"sr-only\">Previous</span> -->\r\n<!--   </a> -->\r\n<!--   <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\"> -->\r\n<!--     <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span> -->\r\n<!--     <span class=\"sr-only\">Next</span> -->\r\n<!--   </a> -->\r\n<!-- </div> -->\r\n\r\n"
 
 /***/ }),
 
@@ -862,6 +902,7 @@ module.exports = "\n\n<h3 style=\"text-align: center;\" >Photos!</h3>\n\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosComponent", function() { return PhotosComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -872,17 +913,28 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var PhotosComponent = /** @class */ (function () {
-    function PhotosComponent() {
+    //    images = [1, 2, 3, 4].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+    //    images = [1, 2, 3, 4].map(() =>`assets/images/carousel/DSC_0193.JPG','assets/images/carousel/DSC_0953.JPG`);
+    //    images = [1, 2, 3, 4].map(() =>`https://picsum.photos/900/500?random&t=${Math.random()}`);
+    function PhotosComponent(config) {
+        // customize default values of carousels used by this component tree
+        config.interval = 10000;
+        config.wrap = false;
+        config.keyboard = false;
+        config.pauseOnHover = false;
     }
     PhotosComponent.prototype.ngOnInit = function () { };
     PhotosComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-photos',
             template: __webpack_require__(/*! ./photos.component.html */ "./src/app/app-photos/photos.component.html"),
+            providers: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbCarouselConfig"]] // add NgbCarouselConfig to the component providers
+            ,
             styles: [__webpack_require__(/*! ./photos.component.css */ "./src/app/app-photos/photos.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbCarouselConfig"]])
     ], PhotosComponent);
     return PhotosComponent;
 }());
@@ -898,7 +950,7 @@ var PhotosComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.relevepluie-dernierReleve{\r\n    text-align: center; \r\n  } \r\n\r\n\r\n  "
+module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.relevepluie-dernierReleve{\r\n    text-align: center; \r\n  } \r\n\r\n\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1yZWxldmVwbHVpZS9yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVEO0lBQ0ksbUJBQW1CO0dBQ3BCIiwiZmlsZSI6ImFwcC1yZWxldmVwbHVpZS9yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnJlbGV2ZXBsdWllLXRpdHJlIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnJlbGV2ZXBsdWllLWRlcm5pZXJSZWxldmV7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7IFxyXG4gIH0gXHJcblxyXG5cclxuICAiXX0= */"
 
 /***/ }),
 
@@ -909,7 +961,7 @@ module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"relevepluie-titre\">Releve pluie!</h2>\n\n<div class=\"relevepluie-dernierReleve\" >\n\t<label for=\"value\">Dernier releve : </label> {{relevepluie.valeur}} mm - le: {{relevepluie.date}}\n</div>\n<div [hidden]=\"submitted\" style=\"width: 300px;margin-left: 38.5%;\">\n\t<form (ngSubmit)=\"onSubmit()\">\n\t  <div class=\"form-group\">\n\t\t<label for=\"date\">Date</label>\n\t\t<input type=\"date\" class=\"form-control\" id=\"date\" required [(ngModel)]=\"relevepluie.date\" name=\"name\">\n\t  </div>\n  \n\t  <div class=\"form-group\">\n\t\t<label for=valeur>Valeur</label>\n\t\t<input type=\"text\" class=\"form-control\" id=\"valeur\" required [(ngModel)]=\"relevepluie.valeur\" name=\"valeur\">\n\t  </div>\n  \n\t\t<nav>\n\t\t\t<button type=\"submit\" class=\"btn btn-success mr-2\">Submit</button>\n\t\t\t<a routerLink=\"search\"\tclass=\"btn btn-info active\" role=\"button\" routerLinkActive=\"active\">Search</a>\n\t</nav>\n\t\t</form>\n\t\t\n  </div>\n  \n  <div [hidden]=\"!submitted\" style=\"margin-left: 38.5%;\">\n\t<h4>Ajouter avec success !!</h4>\n\t<button class=\"btn btn-success\" (click)=\"newRelevepluie()\">Add</button>\n  </div>\n\n\n\n\n\n"
+module.exports = "<h2 class=\"relevepluie-titre\">Releve pluie!</h2>\r\n\r\n<div class=\"relevepluie-dernierReleve\" >\r\n\t<label for=\"value\">Dernier releve : </label> {{lastvalue.valeur}} mm - le: {{lastvalue.jour}}-{{lastvalue.mois}}-{{lastvalue.annee}}\r\n</div>\r\n<div [hidden]=\"submitted\" style=\"width: 300px;margin-left: 38.5%;\">\r\n\t<form (ngSubmit)=\"onSubmit()\">\r\n\t  <div class=\"form-group\">\r\n\t\t<label for=\"date\">Date</label>\r\n\t\t<input type=\"date\" class=\"form-control\" id=\"date\" required [(ngModel)]=\"relevepluie.date\" name=\"name\">\r\n\t  </div>\r\n  \r\n\t  <div class=\"form-group\">\r\n\t\t<label for=valeur>Valeur</label>\r\n\t\t<input type=\"text\" class=\"form-control\" id=\"valeur\" required [(ngModel)]=\"relevepluie.valeur\" name=\"valeur\">\r\n\t  </div>\r\n  \r\n\t\t<nav>\r\n\t\t\t<button type=\"submit\" class=\"btn btn-success mr-2\">Submit</button>\r\n\t\t\t<a routerLink=\"search\"\tclass=\"btn btn-info active\" role=\"button\" routerLinkActive=\"active\">Search</a>\r\n\t</nav>\r\n\t\t</form>\r\n\t\t\r\n  </div>\r\n  \r\n  <div [hidden]=\"!submitted\" style=\"margin-left: 38.5%;\">\r\n\t<h4>Ajouter avec success !!</h4>\r\n\t<button class=\"btn btn-success\" (click)=\"newRelevepluie()\">Add</button>\r\n  </div>\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -940,7 +992,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-//import { Relevepluie } from '../relevepluie';
 var RelevepluieComponent = /** @class */ (function () {
     function RelevepluieComponent(restService, route, router) {
         this.restService = restService;
@@ -1060,7 +1111,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\r\n.ng-valid { border-color: green; }\r\n\r\n.ng-invalid { border-color: red; }    \r\n"
+module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\r\n.ng-valid { border-color: green; }\r\n\r\n.ng-invalid { border-color: red; }    \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1zZWFyY2gtcmVsZXZlcGx1aWUvc2VhcmNoLXJlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVELFlBQVksb0JBQW9CLEVBQUU7O0FBQ2xDLGNBQWMsa0JBQWtCLEVBQUUiLCJmaWxlIjoiYXBwLXNlYXJjaC1yZWxldmVwbHVpZS9zZWFyY2gtcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucmVsZXZlcGx1aWUtc2VhcmNoe1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyOyBcclxufVxyXG5cclxuLm5nLXZhbGlkIHsgYm9yZGVyLWNvbG9yOiBncmVlbjsgfVxyXG4ubmctaW52YWxpZCB7IGJvcmRlci1jb2xvcjogcmVkOyB9ICAgIFxyXG4iXX0= */"
 
 /***/ }),
 
@@ -1071,7 +1122,7 @@ module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"width: 300px;margin-left: 38.5%;\">\n\t<form (ngSubmit)=\"onSubmit()\" #searchForm=\"ngForm\" [style.visibility]=\"isSearchDivVisible ? 'visible' : 'hidden'\">\n\t  <h3 class=\"relevepluie-search\">Chercher par date</h3>\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"date\">Date</label> <input type=\"text\"\n\t\t\tclass=\"form-control\" id=\"date\" required [(ngModel)]=\"date\"\n\t\t\tname=\"date\" type=\"date\">\n\t\t</div>\n\n\t\t\t<div class=\"btn-group\">\n\t\t\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\n\t\t\t\t<button type=\"submit\" class=\"btn btn-success\"  [disabled]=\"!searchForm.form.valid\" formaction=\"/details\">Submit</button>\t\n\t\t\t</div>\n\t</form>\n</div>\n\n<div style=\"width: 300px;margin-left: 38.5%;margin-top: -10%\" >\n\t<form [style.visibility]=\"isDetailDivVisible ? 'visible' : 'hidden'\">\n\t  <h3 class=\"relevepluie-detail\">Date sélectionnée</h3>\n\t  <div *ngIf=\"relevepluie\"> \n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label for=id>Id</label> \n\t\t\t\t<input [disabled]=true type=\"text\" class=\"form-control\" id=\"id\" [(ngModel)]=\"relevepluie.id\" name=\"id\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label for=Date>Date</label> \n\t\t\t\t<input [disabled]=true type=\"text\" class=\"form-control\" id=\"date\"  [(ngModel)]=\"relevepluie.date\" name=\"date\">\n\t\t\t </div>\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<label for=valeur>Valeur</label> \n\t\t\t\t<input id=\"valeur\" type=\"text\" class=\"form-control\" [(ngModel)]=\"relevepluie.valeur\" name=\"valeur\">\n\t\t\t</div>\t\t\n\t\t</div>\n  \n\t\t  <div class=\"btn-group\">\n\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\n\t\t<button class=\"btn btn-success mr-2\"  (click)=\"updateRelevepluie()\" >Update</button>\n\t\t<button class=\"btn btn-danger\" (click)=\"deleteRelevepluie()\">Delete</button>\n\t  </div>\n\t</form>\n  </div>\t\n\t\n\n\n\n\t\t\n\t\t\n\t\t\n\n\t"
+module.exports = "<div style=\"width: 300px;margin-left: 38.5%;\">\r\n\t<form (ngSubmit)=\"onSubmit()\" #searchForm=\"ngForm\" [style.visibility]=\"isSearchDivVisible ? 'visible' : 'hidden'\">\r\n\t  <h3 class=\"relevepluie-search\">Chercher par date</h3>\r\n\t\t<div class=\"form-group\">\r\n\t\t\t<label for=\"date\">Date</label> <input type=\"text\"\r\n\t\t\tclass=\"form-control\" id=\"date\" required [(ngModel)]=\"date\"\r\n\t\t\tname=\"date\" type=\"date\">\r\n\t\t</div>\r\n\r\n\t\t\t<div class=\"btn-group\">\r\n\t\t\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\r\n\t\t\t\t<button type=\"submit\" class=\"btn btn-success\"  [disabled]=\"!searchForm.form.valid\" formaction=\"/details\">Submit</button>\t\r\n\t\t\t</div>\r\n\t</form>\r\n</div>\r\n\r\n<div style=\"width: 300px;margin-left: 38.5%;margin-top: -10%\" >\r\n\t<form [style.visibility]=\"isDetailDivVisible ? 'visible' : 'hidden'\">\r\n\t  <h3 class=\"relevepluie-detail\">Date sélectionnée</h3>\r\n\t  <div *ngIf=\"relevepluie\"> \r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=id>Id</label> \r\n\t\t\t\t<input [disabled]=true type=\"text\" class=\"form-control\" id=\"id\" [(ngModel)]=\"relevepluie.id\" name=\"id\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=Date>Date</label> \r\n\t\t\t\t<input [disabled]=true type=\"text\" class=\"form-control\" id=\"date\"  [(ngModel)]=\"relevepluie.date\" name=\"date\">\r\n\t\t\t </div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=valeur>Valeur</label> \r\n\t\t\t\t<input id=\"valeur\" type=\"text\" class=\"form-control\" [(ngModel)]=\"relevepluie.valeur\" name=\"valeur\">\r\n\t\t\t</div>\t\t\r\n\t\t</div>\r\n  \r\n\t\t  <div class=\"btn-group\">\r\n\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\r\n\t\t<button class=\"btn btn-success mr-2\"  (click)=\"updateRelevepluie(relevepluie)\" >Update</button>\r\n\t\t<button class=\"btn btn-danger\" (click)=\"deleteRelevepluie()\">Delete</button>\r\n\t  </div>\r\n\t</form>\r\n\t</div>\t\r\n\r\n\t\t\r\n\r\n\r\n\r\n\t\t\r\n\t\t\r\n\t\t\r\n\r\n\t"
 
 /***/ }),
 
@@ -1119,24 +1170,27 @@ var SearchRelevepluieComponent = /** @class */ (function () {
         var _this = this;
         this.restService.getRelevepluieByDate(this.date).subscribe(function (relevepluie) { return _this.relevepluie = relevepluie; });
     };
-    SearchRelevepluieComponent.prototype.updateRelevepluie = function () {
-        console.log(this.relevepluie);
-        console.log("tjrs rien update");
-        var rel = function (obj) {
-            console.log("tjrs rien");
-            console.log(obj.relevepluie.id);
-        };
-        this.restService.updateRelevepluie(rel)
-            .subscribe(function (data) { return console.log(data); }, function (error) { return console.log(error); });
+    //  newUpdaterelevepluie(): void {
+    //  this.relevepluie = new Relevepluie();
+    //}
+    SearchRelevepluieComponent.prototype.updateRelevepluie = function (relev) {
+        var _this = this;
+        console.log(this.relevepluie.id);
+        console.log(this.relevepluie.valeur);
+        this.restService.updateRelevepluie({ id: relev.id, date: relev.date, valeur: relev.valeur })
+            .subscribe(function (data) {
+            console.log(data),
+                _this.relevepluie = data;
+        }, function (error) { return console.log(error); });
     };
     SearchRelevepluieComponent.prototype.deleteRelevepluie = function () {
         var _this = this;
         console.log(this.relevepluie.id);
-        console.log("tjrs rien delete");
         // this.dataService.deleteRelevepluie(this.relevepluie.id).then(() => this.goBack());
         this.restService.deleteRelevepluie(this.relevepluie.id)
             .subscribe(function () { return _this.message = "Relevepluie Supprimer avec Success!"; }),
             function (error) { return console.log(error); };
+        this.getRelevepluieByDate();
     };
     SearchRelevepluieComponent.prototype.goBack = function () {
         this.location.back();
@@ -1169,7 +1223,7 @@ var SearchRelevepluieComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
@@ -1396,6 +1450,9 @@ var RestService = /** @class */ (function () {
     RestService.prototype.getLastValues = function () {
         return this.http.get(endpoint + 'lastValueRelevepluie').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.extractData));
     };
+    RestService.prototype.getvalueByDayForMonthByYear = function () {
+        return this.http.get(endpoint + 'valueByDayForMonthByYear').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.extractData));
+    };
     RestService.prototype.addRelevepluie = function (relevepluie) {
         console.log(relevepluie);
         return this.http.post(endpoint + 'addRelevepluie', relevepluie);
@@ -1406,8 +1463,8 @@ var RestService = /** @class */ (function () {
     RestService.prototype.getTotalByMonthByYear = function (year) {
         return this.http.get(endpoint + 'totalByMonthByYear/' + year).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.extractData));
     };
-    RestService.prototype.updateRelevepluie = function (relev) {
-        return this.http.put(endpoint + 'updateRelevepluie', relev);
+    RestService.prototype.updateRelevepluie = function (value) {
+        return this.http.put(endpoint + 'updateRelevepluie/', value);
     };
     RestService.prototype.deleteRelevepluie = function (id) {
         return this.http.delete(endpoint + 'deleteRelevepluie/' + id);
@@ -1498,7 +1555,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ALQI6492\vstAngularWorkspace\pluvio-client\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\ALQI6492\git\pluvio-client\src\main.ts */"./src/main.ts");
 
 
 /***/ })
