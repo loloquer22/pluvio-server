@@ -16,13 +16,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 public class PluvioServerApplication {
 	
+	@SuppressWarnings("unused")
 	private static final Logger logger = LoggerFactory.getLogger(PluvioServerApplication.class);	
 	
 	
     public static void main( String[] args )
     {
     	SpringApplication.run(PluvioServerApplication.class, args);
-//        System.out.println( "Hello World!" );
     }
     
     @Bean
@@ -30,7 +30,7 @@ public class PluvioServerApplication {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/pluvio/*").allowedOrigins("http://localhost:4200");
+                registry.addMapping("/pluvio/*").allowedOrigins("http://localhost");
             }
         };
     }

@@ -1,8 +1,11 @@
 package bzh.pluvio.pluvioServer.controller;
 
 import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,12 +29,14 @@ import bzh.pluvio.pluvioServer.model.ListYears;
 import bzh.pluvio.pluvioServer.model.Relevepluie;
 import bzh.pluvio.pluvioServer.model.RelevepluieByDate;
 import bzh.pluvio.pluvioServer.model.TotalByMonthByYear;
+import bzh.pluvio.pluvioServer.model.ValueByDayForMonthByYear;
 import bzh.pluvio.pluvioServer.model.ValuesByYear;
 import bzh.pluvio.pluvioServer.repo.LastValueRepository;
 import bzh.pluvio.pluvioServer.repo.ListYearRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieByDateRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieRepository;
 import bzh.pluvio.pluvioServer.repo.TotalByMonthByYearRepository;
+import bzh.pluvio.pluvioServer.repo.ValueByDayForMonthByYearRepository;
 import bzh.pluvio.pluvioServer.repo.ValuesByYearRepository;
 
 @RestController
@@ -59,6 +64,9 @@ public class RelepluieController {
 	@Autowired
 	RelevepluieByDateRepository relevepluieByDateRepository;
 	
+	@Autowired
+	ValueByDayForMonthByYearRepository valueByDayForMonthByYearRepository;
+	
 	@GetMapping(value = "/relevepluie", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Relevepluie> getAll() {
 		List<Relevepluie> list = new ArrayList<>();
@@ -78,6 +86,23 @@ public class RelepluieController {
 		model.addAttribute("listByYear", listByYear);
 		return listByYear;
 
+	}
+	
+	@GetMapping(value = "/valueByDayForMonthByYear", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<ValueByDayForMonthByYear>> getValueByDayForMonthByYear() {
+//		return null;
+		
+		Date date = new Date();
+		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		int month = localDate.getMonthValue();
+		int year = localDate.getYear();
+		
+		List<ValueByDayForMonthByYear> valueByDayForMonthByYear = valueByDayForMonthByYearRepository.getValueByDayForMonthByYear(year, month );
+
+		logger.info(" ** list value By Day For Month By Year  : **" + year + " month : " +  month);
+		ResponseEntity<List<ValueByDayForMonthByYear>> reVBDFMBY= new ResponseEntity<List<ValueByDayForMonthByYear>>(valueByDayForMonthByYear, HttpStatus.OK);
+    
+		return  reVBDFMBY;
 	}
 	
 	@PostMapping(value = "/addRelevepluie")
