@@ -25,13 +25,13 @@ public class PluvioServerApplication {
     	SpringApplication.run(PluvioServerApplication.class, args);
     }
     
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/pluvio/*").allowedOrigins("http://localhost");
-            }
-        };
-    }
+//    @Bean
+//    public WebMvcConfigurer corsConfigurer() {
+//        return new WebMvcConfigurerAdapter() {
+//            @Override
+//            public void addCorsMappings(CorsRegistry registry) {
+//                registry.addMapping("/pluvio/*").allowedOrigins("http://localhost");
+//            }
+//        };
+//    }
 }
