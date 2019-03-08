@@ -12,7 +12,7 @@ public class LastValue {
 	
 	private int id;
 	private String date;
-	private int valeur;
+	private float valeur;
 	
 	public LastValue() {}
 	
@@ -32,16 +32,17 @@ public class LastValue {
 		this.date = string;
 	}
 	
-	public int getValeur() {
+	public float getValeur() {
 		return valeur;
 	}
-	public void setValeur(int valeur) {
+	public void setValeur(float valeur) {
 		this.valeur = valeur;
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("RelevePluieLastValue[date='%s',valeur='%s' ]", date, valeur);
+		System.out.println("****  valeur "+ valeur);
+		return String.format("RelevePluieLastValue[date='%s',valeur='%.1f' ]", date, valeur);
 	}
 
 }

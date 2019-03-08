@@ -22,7 +22,7 @@ public class RelevepluieByDate {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy", locale = "fr_FR", timezone = "UTC")
 	
 	private Date date;
-	private int valeur;
+	private float valeur;
 	private int id;
 	
 	
@@ -44,16 +44,17 @@ public class RelevepluieByDate {
 		this.date = date;
 	}
 	
-	public int getValeur() {
+	public float getValeur() {
 		return valeur;
 	}
-	public void setValeur(int valeur) {
+	public void setValeur(float valeur) {
 		this.valeur = valeur;
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("RelevepluieByDate[id='%s',date='%s',valeur='%s' ]",id , date, valeur);
+		System.out.println("****  valeur "+ valeur);
+		return String.format("RelevepluieByDate[id='%s',date='%s',valeur='%f.1' ]",id , date, valeur);
 	}
 
 

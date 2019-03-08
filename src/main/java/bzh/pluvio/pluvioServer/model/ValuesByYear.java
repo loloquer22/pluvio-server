@@ -11,12 +11,12 @@ import javax.persistence.Table;
 public class ValuesByYear {
 	
 	private int annee;
-	private int valeur;
+	private float valeur;
 	
 	 public ValuesByYear() {
 	    }
 
-		public ValuesByYear(int annee, int valeur) {
+		public ValuesByYear(int annee, float valeur) {
 			this.annee = annee;
 			this.valeur = valeur;
 		}
@@ -29,16 +29,16 @@ public class ValuesByYear {
 	public void setAnnee(int annee) {
 		this.annee = annee;
 	}
-	public int getValeur() {
+	public float getValeur() {
 		return valeur;
 	}
-	public void setValeur(int valeur) {
+	public void setValeur(float valeur) {
 		this.valeur = valeur;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("ValuesByYear[annee='%s',valeur='%s' ]", annee, valeur);
+		return String.format("ValuesByYear[annee='%s',valeur='%f.1' ]", annee, valeur);
 	}
 	
 	

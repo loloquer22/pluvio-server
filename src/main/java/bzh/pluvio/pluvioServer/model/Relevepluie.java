@@ -32,7 +32,7 @@ public class Relevepluie implements Serializable {
 	private int annee;
 
 	@Column(name = "valeur")
-	private int valeur;
+	private float valeur;
 	
 	public Relevepluie() {
 	}
@@ -77,15 +77,15 @@ public class Relevepluie implements Serializable {
 		this.jour = jour;
 	}
 
-	public int getValeur() {
+	public float getValeur() {
 		return valeur;
 	}
 
-	public void setValeur(int valeur) {
+	public void setValeur(float valeur) {
 		this.valeur = valeur;
 	}
 	
-	public Relevepluie(Date date,  int valeur) {
+	public Relevepluie(Date date,  float valeur) {
 		this.date = date;
 //		this.jour = jour;
 //		this.mois = mois;
@@ -95,7 +95,7 @@ public class Relevepluie implements Serializable {
 
 	@Override
 	public String toString() {
-		return String.format("Relevepluie[id=%d,date='%s',jour='%s',mois='%s',annee='%s',valeur='%s' ]", id, date,jour, annee,  mois, valeur);
+		return String.format("Relevepluie[id=%d,date='%s',jour='%s',mois='%s',annee='%s',valeur='%f.1' ]", id, date,jour, annee,  mois, valeur);
 	}
 
 }

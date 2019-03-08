@@ -309,7 +309,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -372,7 +372,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1ncmFwaC9ncmFwaC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -602,7 +602,7 @@ var GraphComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -666,7 +666,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\n  background-color: #00ff00;\r\n  height: 500px;\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  position: relative;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiRUFBRTtFQUNBLHNDQUE2RDtFQUM3RCwwQkFBMEI7RUFDMUIsY0FBYztFQUNkLDRCQUE0QjtFQUM1Qiw2QkFBNkI7RUFDN0IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtDQUNwQiIsImZpbGUiOiJhcHAtaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgIC5ob21lLWltYWdlIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCJhc3NldHMvaW1hZ2VzL2Nhcm91c2VsL0RTQ18wMjQ2LkpQR1wiKTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBmZjAwO1xyXG4gIGhlaWdodDogNTAwcHg7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn0iXX0= */"
+module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\n  background-color: #00ff00;\r\n  height: 500px;\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  position: relative;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLWhvbWUvaG9tZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJFQUFFO0VBQ0Esc0NBQTZEO0VBQzdELDBCQUEwQjtFQUMxQixjQUFjO0VBQ2QsNEJBQTRCO0VBQzVCLDZCQUE2QjtFQUM3Qix1QkFBdUI7RUFDdkIsbUJBQW1CO0NBQ3BCIiwiZmlsZSI6InNyYy9hcHAvYXBwLWhvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiICAuaG9tZS1pbWFnZSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiYXNzZXRzL2ltYWdlcy9jYXJvdXNlbC9EU0NfMDI0Ni5KUEdcIik7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAwZmYwMDtcclxuICBoZWlnaHQ6IDUwMHB4O1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -677,7 +677,7 @@ module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!-- <div class=\"home-image\"> -->\r\n<section class=\"container\">\r\n\r\n\t\r\n\t\t<div style=\"width: 86%; text-align: center;\">\r\n\t\t\t<h5>Précipitations annuelles depuis 2007</h5>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 60%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartData\" [labels]=\"barChartLabels\"\r\n\t\t\t\t[options]=\"barChartOptions\" [legend]=\"barChartLegend\"\r\n\t\t\t\t[colors]=\"barChartColors\" [chartType]=\"barChartType\">\r\n        \t</canvas>\r\n\t\t</div>\r\n\t\t\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 60%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartDataDay\" [labels]=\"barChartLabelsDay\"\r\n\t\t\t\t[options]=\"barChartOptionsDay\" [legend]=\"barChartLegendDay\"\r\n\t\t\t\t[colors]=\"barChartColorsDay\" [chartType]=\"barChartTypeDay\">\r\n        \t</canvas>\r\n\t\t</div>\r\n\r\n\r\n\r\n\t<!--   <ul class=\"years\">\r\n        <li *ngFor=\"let year of years;\">\r\n               Annee: {{year.annee}}\r\n        </li>\r\n    </ul> -->\r\n</section>\r\n<!-- </div> -->\r\n"
+module.exports = "\r\n<!-- <div class=\"home-image\"> -->\r\n<section class=\"container\">\r\n\r\n\t\r\n\t\t<div style=\"width: 86%; text-align: center;\">\r\n\t\t\t<h5>Précipitations annuelles depuis 2007</h5>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 60%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartData\" [labels]=\"barChartLabels\"\r\n\t\t\t\t[options]=\"barChartOptions\" [legend]=\"barChartLegend\"\r\n\t\t\t\t[colors]=\"barChartColors\" [chartType]=\"barChartType\">\r\n        \t</canvas>\r\n\t\t</div>\r\n\t\t\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 30%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartDataDay\" [labels]=\"barChartLabelsDay\"\r\n\t\t\t\t[options]=\"barChartOptionsDay\" [legend]=\"barChartLegendDay\"\r\n\t\t\t\t[colors]=\"barChartColorsDay\" [chartType]=\"barChartTypeDay\">\r\n        \t</canvas>\r\n\t\t</div>\r\n\r\n\r\n\r\n\t<!--   <ul class=\"years\">\r\n        <li *ngFor=\"let year of years;\">\r\n               Annee: {{year.annee}}\r\n        </li>\r\n    </ul> -->\r\n</section>\r\n<!-- </div> -->\r\n"
 
 /***/ }),
 
@@ -719,7 +719,15 @@ var HomeComponent = /** @class */ (function () {
         this.barChartLabels = this.labels;
         this.barChartType = 'bar';
         this.Day = false;
-        this.barChartOptions = '';
+        this.barChartOptions = {
+            scales: {
+                yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+            }
+        };
         this.chartHovered = '';
         this.chartClicked = '';
         this.barChartColors = [{
@@ -732,7 +740,17 @@ var HomeComponent = /** @class */ (function () {
         this.barChartLabelsDay = this.labelsDay;
         this.barChartTypeDay = 'bar';
         this.barChartLegendDay = true;
-        this.barChartOptionsDay = '';
+        this.barChartOptionsDay = {
+            scales: {
+                yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            min: 0,
+                            sugestedMax: 50
+                        }
+                    }]
+            }
+        };
         this.chartHoveredDay = '';
         this.chartClickedDay = '';
         this.barChartColorsDay = [{
@@ -807,7 +825,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {\r\n  width: 200px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n  position: -webkit-sticky;\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1tYWluLW5hdi9tYWluLW5hdi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UseUJBQWlCO0VBQWpCLGlCQUFpQjtFQUNqQixPQUFPO0NBQ1IiLCJmaWxlIjoiYXBwLW1haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZW5hdi1jb250YWluZXIge1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLnNpZGVuYXYge1xyXG4gIHdpZHRoOiAyMDBweDtcclxufVxyXG5cclxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcclxuICBwb3NpdGlvbjogc3RpY2t5O1xyXG4gIHRvcDogMDtcclxufVxyXG4iXX0= */"
+module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {\r\n  width: 200px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n  position: -webkit-sticky;\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLW1haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0NBQ2Q7O0FBRUQ7RUFDRSxhQUFhO0NBQ2Q7O0FBRUQ7RUFDRSx5QkFBaUI7RUFBakIsaUJBQWlCO0VBQ2pCLE9BQU87Q0FDUiIsImZpbGUiOiJzcmMvYXBwL2FwcC1tYWluLW5hdi9tYWluLW5hdi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNpZGVuYXYtY29udGFpbmVyIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbi5zaWRlbmF2IHtcclxuICB3aWR0aDogMjAwcHg7XHJcbn1cclxuXHJcbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XHJcbiAgcG9zaXRpb246IHN0aWNreTtcclxuICB0b3A6IDA7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -876,7 +894,7 @@ var MainNavComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtcGhvdG9zL3Bob3Rvcy5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1waG90b3MvcGhvdG9zLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -950,7 +968,7 @@ var PhotosComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.relevepluie-dernierReleve{\r\n    text-align: center; \r\n  } \r\n\r\n\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1yZWxldmVwbHVpZS9yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVEO0lBQ0ksbUJBQW1CO0dBQ3BCIiwiZmlsZSI6ImFwcC1yZWxldmVwbHVpZS9yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnJlbGV2ZXBsdWllLXRpdHJlIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnJlbGV2ZXBsdWllLWRlcm5pZXJSZWxldmV7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7IFxyXG4gIH0gXHJcblxyXG5cclxuICAiXX0= */"
+module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.relevepluie-dernierReleve{\r\n    text-align: center; \r\n  } \r\n\r\n\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLXJlbGV2ZXBsdWllL3JlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7Q0FDdEI7O0FBRUQ7SUFDSSxtQkFBbUI7R0FDcEIiLCJmaWxlIjoic3JjL2FwcC9hcHAtcmVsZXZlcGx1aWUvcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5yZWxldmVwbHVpZS10aXRyZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5yZWxldmVwbHVpZS1kZXJuaWVyUmVsZXZle1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyOyBcclxuICB9IFxyXG5cclxuXHJcbiAgIl19 */"
 
 /***/ }),
 
@@ -1111,7 +1129,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\r\n.ng-valid { border-color: green; }\r\n\r\n.ng-invalid { border-color: red; }    \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1zZWFyY2gtcmVsZXZlcGx1aWUvc2VhcmNoLXJlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVELFlBQVksb0JBQW9CLEVBQUU7O0FBQ2xDLGNBQWMsa0JBQWtCLEVBQUUiLCJmaWxlIjoiYXBwLXNlYXJjaC1yZWxldmVwbHVpZS9zZWFyY2gtcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucmVsZXZlcGx1aWUtc2VhcmNoe1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyOyBcclxufVxyXG5cclxuLm5nLXZhbGlkIHsgYm9yZGVyLWNvbG9yOiBncmVlbjsgfVxyXG4ubmctaW52YWxpZCB7IGJvcmRlci1jb2xvcjogcmVkOyB9ICAgIFxyXG4iXX0= */"
+module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\r\n.ng-valid { border-color: green; }\r\n\r\n.ng-invalid { border-color: red; }    \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLXNlYXJjaC1yZWxldmVwbHVpZS9zZWFyY2gtcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxtQkFBbUI7Q0FDdEI7O0FBRUQsWUFBWSxvQkFBb0IsRUFBRTs7QUFDbEMsY0FBYyxrQkFBa0IsRUFBRSIsImZpbGUiOiJzcmMvYXBwL2FwcC1zZWFyY2gtcmVsZXZlcGx1aWUvc2VhcmNoLXJlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLnJlbGV2ZXBsdWllLXNlYXJjaHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjsgXHJcbn1cclxuXHJcbi5uZy12YWxpZCB7IGJvcmRlci1jb2xvcjogZ3JlZW47IH1cclxuLm5nLWludmFsaWQgeyBib3JkZXItY29sb3I6IHJlZDsgfSAgICBcclxuIl19 */"
 
 /***/ }),
 
@@ -1223,7 +1241,7 @@ var SearchRelevepluieComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 

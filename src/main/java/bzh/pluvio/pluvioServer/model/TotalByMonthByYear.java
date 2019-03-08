@@ -14,7 +14,7 @@ public class TotalByMonthByYear {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int mois;
-	private int valeur;
+	private float valeur;
 	
 	
 	public TotalByMonthByYear() {}
@@ -32,16 +32,16 @@ public class TotalByMonthByYear {
 	public void setMois(int mois) {
 		this.mois = mois;
 	}
-	public int getValeur() {
+	public float getValeur() {
 		return valeur;
 	}
-	public void setValeur(int valeur) {
+	public void setValeur(float valeur) {
 		this.valeur = valeur;
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("TotalByMonthByYear[annee='%s',mois='%s',valeur='%s' ]",annee, mois, valeur);
+		return String.format("TotalByMonthByYear[annee='%s',mois='%s',valeur='%f.1' ]",annee, mois, valeur);
 	}
 
 }

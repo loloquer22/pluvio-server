@@ -25,18 +25,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import bzh.pluvio.pluvioServer.model.ListValDayMonthYear;
 import bzh.pluvio.pluvioServer.model.ListYears;
 import bzh.pluvio.pluvioServer.model.Relevepluie;
 import bzh.pluvio.pluvioServer.model.RelevepluieByDate;
 import bzh.pluvio.pluvioServer.model.TotalByMonthByYear;
-import bzh.pluvio.pluvioServer.model.ValueByDayForMonthByYear;
 import bzh.pluvio.pluvioServer.model.ValuesByYear;
 import bzh.pluvio.pluvioServer.repo.LastValueRepository;
+import bzh.pluvio.pluvioServer.repo.ListValDayMthYearRepository;
 import bzh.pluvio.pluvioServer.repo.ListYearRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieByDateRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieRepository;
 import bzh.pluvio.pluvioServer.repo.TotalByMonthByYearRepository;
-import bzh.pluvio.pluvioServer.repo.ValueByDayForMonthByYearRepository;
 import bzh.pluvio.pluvioServer.repo.ValuesByYearRepository;
 
 @RestController
@@ -65,7 +65,7 @@ public class RelepluieController {
 	RelevepluieByDateRepository relevepluieByDateRepository;
 	
 	@Autowired
-	ValueByDayForMonthByYearRepository valueByDayForMonthByYearRepository;
+	ListValDayMthYearRepository listValDayMonthYearRepository;
 	
 	@GetMapping(value = "/relevepluie", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Relevepluie> getAll() {
@@ -85,24 +85,6 @@ public class RelepluieController {
 		logger.info(" ** byYearRelevepluie : "+ listByYear);
 		model.addAttribute("listByYear", listByYear);
 		return listByYear;
-
-	}
-	
-	@GetMapping(value = "/valueByDayForMonthByYear", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<ValueByDayForMonthByYear>> getValueByDayForMonthByYear() {
-//		return null;
-		
-		Date date = new Date();
-		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-		int month = localDate.getMonthValue();
-		int year = localDate.getYear();
-		
-		List<ValueByDayForMonthByYear> valueByDayForMonthByYear = valueByDayForMonthByYearRepository.getValueByDayForMonthByYear(year, month );
-
-		logger.info(" ** list value By Day For Month By Year  : **" + year + " month : " +  month);
-		ResponseEntity<List<ValueByDayForMonthByYear>> reVBDFMBY= new ResponseEntity<List<ValueByDayForMonthByYear>>(valueByDayForMonthByYear, HttpStatus.OK);
-    
-		return  reVBDFMBY;
 	}
 	
 	@PostMapping(value = "/addRelevepluie")
@@ -145,6 +127,24 @@ public class RelepluieController {
 
 	}
 
+	@GetMapping(value = "/listValDayMonthYear", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<ListValDayMonthYear> getValueByDayForMonthByYear(Model model) {
+		
+		Date date = new Date();
+		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		int mois = localDate.getMonthValue();
+		int annee = localDate.getYear();
+		
+		logger.debug(" ** annee" + annee  + " mois " + mois );
+		
+		List<ListValDayMonthYear> valueByDayForMonthByYear = listValDayMonthYearRepository.getValDayMonthYear(annee, mois);
+		logger.debug(" ** valueByDayForMonthByYear" + valueByDayForMonthByYear );
+		model.addAttribute("valueByDayForMonthByYear", valueByDayForMonthByYear);
+		
+	//	ResponseEntity<ListValDayMonthYear> valByDayForMonthByYear= new ResponseEntity<ListValDayMonthYear>(valueByDayForMonthByYear, HttpStatus.OK);
+		
+		return valueByDayForMonthByYear;
+	}
 	
 	@GetMapping(value = "/relevepluieByDate/{date}", produces = MediaType.APPLICATION_JSON_VALUE)
 		public ResponseEntity<RelevepluieByDate> getRelevepluieByDate(@PathVariable(value = "date") String date) throws ParseException{
@@ -173,7 +173,7 @@ public class RelepluieController {
 		logger.info(" ** update relevepluie for id= " + relevepluie.getId()  +  " modify by value= " + relevepluie.getValeur() );
 		
 		long id =  relevepluie.getId();
-		int valeur = relevepluie.getValeur();
+		float valeur = relevepluie.getValeur();
 	
 		Optional<Relevepluie> relevepluieData = repository.findById(id);
 		
@@ -202,6 +202,7 @@ public class RelepluieController {
 		 logger.info(" ** delete relevepluie by id : " + id );
 		repository.delete(id);
 	}
+
 
 	
 }
