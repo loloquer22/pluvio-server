@@ -127,23 +127,27 @@ public class RelepluieController {
 
 	}
 
-	@GetMapping(value = "/listValDayMonthYear", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<ListValDayMonthYear> getValueByDayForMonthByYear(Model model) {
+	@GetMapping(value = "/listValDayMonthYear/{annee}/{mois}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<ListValDayMonthYear>> getValueByDayForMonthByYear(@PathVariable ("annee") int annee, @PathVariable ("mois")  int mois) {
 		
+		logger.debug(" **request annee : " + annee  + " mois : " + mois );
+		if(annee==0 && mois==0) {
 		Date date = new Date();
 		LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-		int mois = localDate.getMonthValue();
-		int annee = localDate.getYear();
+		 mois = localDate.getMonthValue();
+		 annee = localDate.getYear();
+		}
 		
-		logger.debug(" ** annee" + annee  + " mois " + mois );
+		logger.info(" ** send annee : " + annee  + " mois : " + mois );
 		
 		List<ListValDayMonthYear> valueByDayForMonthByYear = listValDayMonthYearRepository.getValDayMonthYear(annee, mois);
 		logger.debug(" ** valueByDayForMonthByYear" + valueByDayForMonthByYear );
-		model.addAttribute("valueByDayForMonthByYear", valueByDayForMonthByYear);
 		
-	//	ResponseEntity<ListValDayMonthYear> valByDayForMonthByYear= new ResponseEntity<ListValDayMonthYear>(valueByDayForMonthByYear, HttpStatus.OK);
+		ResponseEntity<List<ListValDayMonthYear>> valByDayForMonthByYear= new ResponseEntity<List<ListValDayMonthYear>>(valueByDayForMonthByYear, HttpStatus.OK);
 		
-		return valueByDayForMonthByYear;
+		logger.info(" ** valByDayForMonthByYear : " + valByDayForMonthByYear);
+		
+		return valByDayForMonthByYear;
 	}
 	
 	@GetMapping(value = "/relevepluieByDate/{date}", produces = MediaType.APPLICATION_JSON_VALUE)

@@ -10,29 +10,13 @@ import javax.persistence.Table;
 @Table(name = "relevepluie")
 public class ListValDayMonthYear {
 	
-//	private int annee;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-//	private int mois;
 	private int jour;
 	private float valeur;
 	
 	
 	public ListValDayMonthYear() {}
-	
-//	public int getAnnee() {
-//		return annee;
-//	}
-//	public void setAnnee(int annee) {
-//		this.annee = annee;
-//	}
-//	
-//	public int getMois() {
-//		return mois;
-//	}
-//	public void setMois(int mois) {
-//		this.mois = mois;
-//	}
 	
 	public int getJour() {
 		return jour;
@@ -50,7 +34,7 @@ public class ListValDayMonthYear {
 	
 	@Override
 	public String toString() {
-		return String.format("ListValDayMonthYear[jour='%s',valeur='%f.1' ]", jour, valeur);
+		return String.format("ListValDayMonthYear[jour='%s',valeur='%f' ]", jour, valeur);
 	}
 
 }
