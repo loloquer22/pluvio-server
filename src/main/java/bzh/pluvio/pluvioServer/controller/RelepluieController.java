@@ -25,18 +25,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import bzh.pluvio.pluvioServer.model.ListValDayMonthYear;
 import bzh.pluvio.pluvioServer.model.ListYears;
 import bzh.pluvio.pluvioServer.model.Relevepluie;
 import bzh.pluvio.pluvioServer.model.RelevepluieByDate;
 import bzh.pluvio.pluvioServer.model.TotalByMonthByYear;
+import bzh.pluvio.pluvioServer.model.ValueByDayForMonthByYear;
 import bzh.pluvio.pluvioServer.model.ValuesByYear;
-import bzh.pluvio.pluvioServer.repo.LastValueRepository;
-import bzh.pluvio.pluvioServer.repo.ListValDayMthYearRepository;
 import bzh.pluvio.pluvioServer.repo.ListYearRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieByDateRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieRepository;
 import bzh.pluvio.pluvioServer.repo.TotalByMonthByYearRepository;
+import bzh.pluvio.pluvioServer.repo.ValueByDayForMonthByYearRepository;
 import bzh.pluvio.pluvioServer.repo.ValuesByYearRepository;
 
 @RestController
@@ -47,26 +46,27 @@ public class RelepluieController {
 
 
 	@Autowired
-	RelevepluieRepository repository;
+	private RelevepluieRepository repository;
 
 	@Autowired
-	ValuesByYearRepository valuesByYearRepository;
+	private ValuesByYearRepository valuesByYearRepository;
+
+//	@Autowired
+//	private LastValueRepository lastValueRepository;
 
 	@Autowired
-	LastValueRepository lastValueRepository;
+	private ListYearRepository listYearRepository;
 
 	@Autowired
-	ListYearRepository listYearRepository;
-
-	@Autowired
-	TotalByMonthByYearRepository totalByMonthByYearRepository;
+	private TotalByMonthByYearRepository totalByMonthByYearRepository;
 	
 	@Autowired
-	RelevepluieByDateRepository relevepluieByDateRepository;
+	private RelevepluieByDateRepository relevepluieByDateRepository;
 	
 	@Autowired
-	ListValDayMthYearRepository listValDayMonthYearRepository;
+	private ValueByDayForMonthByYearRepository valueByDayForMonthByYearRepository;
 	
+
 	@GetMapping(value = "/relevepluie", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Relevepluie> getAll() {
 		List<Relevepluie> list = new ArrayList<>();
@@ -127,9 +127,8 @@ public class RelepluieController {
 
 	}
 
-	@GetMapping(value = "/listValDayMonthYear/{annee}/{mois}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<ListValDayMonthYear>> getValueByDayForMonthByYear(@PathVariable ("annee") int annee, @PathVariable ("mois")  int mois) {
-		
+	@GetMapping(value = "/listValueByDayForMonthByYear/{annee}/{mois}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<ValueByDayForMonthByYear>> getValueByDayForMonthByYear(@PathVariable (value = "annee") int annee, @PathVariable ( value = "mois")  int mois) throws ParseException {
 		logger.debug(" **request annee : " + annee  + " mois : " + mois );
 		if(annee==0 && mois==0) {
 		Date date = new Date();
@@ -137,16 +136,11 @@ public class RelepluieController {
 		 mois = localDate.getMonthValue();
 		 annee = localDate.getYear();
 		}
-		
 		logger.info(" ** send annee : " + annee  + " mois : " + mois );
-		
-		List<ListValDayMonthYear> valueByDayForMonthByYear = listValDayMonthYearRepository.getValDayMonthYear(annee, mois);
-		logger.debug(" ** valueByDayForMonthByYear" + valueByDayForMonthByYear );
-		
-		ResponseEntity<List<ListValDayMonthYear>> valByDayForMonthByYear= new ResponseEntity<List<ListValDayMonthYear>>(valueByDayForMonthByYear, HttpStatus.OK);
-		
-		logger.info(" ** valByDayForMonthByYear : " + valByDayForMonthByYear);
-		
+		List<ValueByDayForMonthByYear> valueByDayForMonthByYear = valueByDayForMonthByYearRepository.getValueByDayForMonthByYear(annee, mois);
+		logger.info(" ** valueByDayForMonthByYear size :" + valueByDayForMonthByYear.size() );
+		ResponseEntity<List<ValueByDayForMonthByYear>> valByDayForMonthByYear= new ResponseEntity<List<ValueByDayForMonthByYear>>(valueByDayForMonthByYear, HttpStatus.OK);
+		logger.info(" ** valByDayForMonthByYear : " + valByDayForMonthByYear.toString());
 		return valByDayForMonthByYear;
 	}
 	
@@ -154,21 +148,16 @@ public class RelepluieController {
 		public ResponseEntity<RelevepluieByDate> getRelevepluieByDate(@PathVariable(value = "date") String date) throws ParseException{
 		RelevepluieByDate relevepluieByDate = relevepluieByDateRepository.getRelevepluieByDate(date);
 		logger.info(" ** Relevepluie by date : " + date );
-		
 		ResponseEntity<RelevepluieByDate> reByDate= new ResponseEntity<RelevepluieByDate>(relevepluieByDate, HttpStatus.OK);
-    
 		return reByDate;
 	}
 				
 	
 	@GetMapping(value = "/totalByMonthByYear/{annee}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<TotalByMonthByYear>> getTotalByMonthByYear(@PathVariable int annee) {
-		
 		List<TotalByMonthByYear> totalByMonthByYear = totalByMonthByYearRepository.getTotalByMonthByYear(annee );
-
 		logger.info(" ** list total By Month By Year : **" + annee + " size : " +  totalByMonthByYear.size());
 		ResponseEntity<List<TotalByMonthByYear>> reTMY= new ResponseEntity<List<TotalByMonthByYear>>(totalByMonthByYear, HttpStatus.OK);
-    
 		return reTMY;
 	}
 	
@@ -204,9 +193,8 @@ public class RelepluieController {
 	@DeleteMapping(value = "deleteRelevepluie/{id}")
 	public void deleteRelevepluie(@PathVariable long id){
 		 logger.info(" ** delete relevepluie by id : " + id );
-		repository.delete(id);
+		repository.deleteById(id);
 	}
-
 
 	
 }

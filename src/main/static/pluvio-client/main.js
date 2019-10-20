@@ -302,6 +302,108 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/app-add-relevepluie/add-relevepluie.component.css":
+/*!*******************************************************************!*\
+  !*** ./src/app/app-add-relevepluie/add-relevepluie.component.css ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtYWRkLXJlbGV2ZXBsdWllL2FkZC1yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/app-add-relevepluie/add-relevepluie.component.html":
+/*!********************************************************************!*\
+  !*** ./src/app/app-add-relevepluie/add-relevepluie.component.html ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div [hidden]=\"!submitted\" style=\"margin-left: 38.5%;\">\n\t<h4>Ajouter avec success !!</h4>\n\t<button class=\"btn btn-success\" (click)=\"addRelevepluie(relevepluie)\">Add</button>\n</div> \n\n<div style=\"width: 300px; margin-left: 38.5%;\">\n\t<form [hidden]=\"submitted\" #addForm=\"ngForm\">\n\t\t<h3 class=\"relevepluie-detail\">Ajouter une valeur</h3>\n\t\t<div class=\"relevepluie-dernierReleve\">\n\t\t\t<label for=\"value\">Dernier releve : </label> {{lastvalue.valeur}} mm\n\t\t\t- le: {{lastvalue.jour}}-{{lastvalue.mois}}-{{lastvalue.annee}}\n\t\t</div>\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"date\">Date</label> <input type=\"date\" class=\"form-control\"\n\t\t\t\tclass=\"form-control\" id=\"date\" required\n\t\t\t\t[(ngModel)]=\"relevepluie.date\" name=\"name\">\n\t\t</div>\n\n\t\t<div class=\"form-group\">\n\t\t\t<label for=valeur>Valeur</label> <input type=\"number\" min=\"0\" class=\"form-control\"\n\t\t\t\tmax=\"50\" step=0.1 class=\"form-control\" id=\"valeur\" required\n\t\t\t\t[(ngModel)]=\"relevepluie.valeur\" name=\"valeur\">\n\t\t</div>\n\n\t\t<!-- \t\t<nav> -->\n\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\n\t\t<button class=\"btn btn-success mr-2\" (click)=\"onAdd('Added')\" [disabled]=\"!addForm.form.valid\">Submit</button>\n\n\t\t<!-- \t</nav> -->\n\t</form>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/app-add-relevepluie/add-relevepluie.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/app-add-relevepluie/add-relevepluie.component.ts ***!
+  \******************************************************************/
+/*! exports provided: AddRelevepluieComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddRelevepluieComponent", function() { return AddRelevepluieComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _services_rest_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/rest.service */ "./src/app/services/rest.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _models_relevepluie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/relevepluie */ "./src/app/models/relevepluie.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AddRelevepluieComponent = /** @class */ (function () {
+    function AddRelevepluieComponent(route, restService, location) {
+        this.route = route;
+        this.restService = restService;
+        this.location = location;
+        this.isDetailDivVisible = false;
+        this.relevepluie = new _models_relevepluie__WEBPACK_IMPORTED_MODULE_4__["Relevepluie"]();
+        this.submitted = false;
+        this.lastvalue = [];
+    }
+    AddRelevepluieComponent.prototype.ngOnInit = function () {
+        this.getLastValues();
+    };
+    AddRelevepluieComponent.prototype.getLastValues = function () {
+        var _this = this;
+        this.lastvalue = [];
+        this.restService.getLastValues().subscribe(function (data) {
+            console.log(data);
+            _this.lastvalue = data;
+        });
+    };
+    AddRelevepluieComponent.prototype.addRelevepluie = function (relev) {
+        this.restService.addRelevepluie(relev)
+            .subscribe(function (data) { return console.log(data); }, function (error) { return console.log(error); });
+        this.submitted = false;
+        this.location.back();
+    };
+    AddRelevepluieComponent.prototype.goBack = function () {
+        this.location.back();
+    };
+    AddRelevepluieComponent.prototype.onAdd = function (buttonType) {
+        if (buttonType === "Added") {
+            this.submitted = true;
+            console.log(buttonType);
+        }
+    };
+    AddRelevepluieComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-add-relevepluie',
+            template: __webpack_require__(/*! ./add-relevepluie.component.html */ "./src/app/app-add-relevepluie/add-relevepluie.component.html"),
+            styles: [__webpack_require__(/*! ./add-relevepluie.component.css */ "./src/app/app-add-relevepluie/add-relevepluie.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _services_rest_service__WEBPACK_IMPORTED_MODULE_2__["RestService"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["Location"]])
+    ], AddRelevepluieComponent);
+    return AddRelevepluieComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-footer/footer.component.css":
 /*!*************************************************!*\
   !*** ./src/app/app-footer/footer.component.css ***!
@@ -309,7 +411,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -372,7 +474,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1ncmFwaC9ncmFwaC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
@@ -383,7 +485,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  <h5 style=\"text-align: center;\" >Graphe mensuel par année</h5>\r\n\r\n<div class=\"container\">\r\n<ngb-accordion #acc=\"ngbAccordion\" activeIds=\"config-panel-one\">\r\n    <ngb-panel title=\"2019\"  id=\"config-panel-one\">\r\n        <ng-template ngbPanelContent>\r\n          <accordion-group heading=\"Année 2019\">\r\n            <div class=\"lineGraph\">\r\n              <div style=\"display: block;\">\r\n                <canvas baseChart width=\"800\" height=\"200\"\r\n                  [datasets]=\"lineChartData2019\"\r\n                  [labels]=\"lineChartLabels\"\r\n                  [options]=\"lineChartOptions\"\r\n                  [colors]=\"lineChartColors\"\r\n                  [legend]=\"lineChartLegend\"\r\n                  [chartType]=\"lineChartType\"\r\n                  (chartHover)=\"chartHovered($event)\"\r\n                  (chartClick)=\"chartClicked($event)\">\r\n                </canvas>\r\n              </div>\r\n            </div>\r\n          </accordion-group>\r\n        </ng-template>\r\n      </ngb-panel>\r\n  <ngb-panel title=\"2018\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2018\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2018\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2017\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2017\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2017\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2016\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2016\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2016\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2015\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2015\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2015\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2014\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2014\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2014\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n    </accordion-group>\r\n   </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2013\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2013\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2013\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2012\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2012\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2012\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n           </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2011\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2011\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2011\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2010\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2010\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2010\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>> \r\n  <ngb-panel title=\"2009\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2009\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2009\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2008\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2008\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2008\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2007\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2007\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2007\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n</ngb-accordion>\r\n</div>\r\n"
+module.exports = "\r\n  <h5 style=\"text-align: center;\" >Graphe mensuel par année</h5>\r\n\r\n<div class=\"container\">\r\n<ngb-accordion #acc=\"ngbAccordion\">\r\n<!--     <ngb-panel title=\"2019\"  id=\"config-panel-one\"> -->\r\n\t<ngb-panel title=\"2019\">\r\n        <ng-template ngbPanelContent>\r\n          <accordion-group heading=\"Année 2019\">\r\n            <div class=\"lineGraph\">\r\n              <div style=\"display: block;\">\r\n                <canvas baseChart width=\"800\" height=\"200\"\r\n                  [datasets]=\"lineChartData2019\"\r\n                  [labels]=\"lineChartLabels\"\r\n                  [options]=\"lineChartOptions\"\r\n                  [colors]=\"lineChartColors\"\r\n                  [legend]=\"lineChartLegend\"\r\n                  [chartType]=\"lineChartType\"\r\n                  (chartHover)=\"chartHovered($event)\"\r\n                  (chartClick)=\"chartClicked($event)\">\r\n                </canvas>\r\n              </div>\r\n            </div>\r\n          </accordion-group>\r\n        </ng-template>\r\n      </ngb-panel>\r\n  <ngb-panel title=\"2018\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2018\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2018\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2017\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2017\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2017\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2016\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2016\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2016\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2015\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2015\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2015\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2014\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2014\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2014\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n    </accordion-group>\r\n   </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2013\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2013\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2013\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2012\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2012\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2012\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n           </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2011\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2011\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2011\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2010\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2010\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2010\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>> \r\n  <ngb-panel title=\"2009\">\r\n      <ng-template ngbPanelContent>\r\n        <accordion-group heading=\"Année 2009\">\r\n          <div class=\"lineGraph\">\r\n            <div style=\"display: block;\">\r\n              <canvas baseChart width=\"800\" height=\"200\"\r\n                [datasets]=\"lineChartData2009\"\r\n                [labels]=\"lineChartLabels\"\r\n                [options]=\"lineChartOptions\"\r\n                [colors]=\"lineChartColors\"\r\n                [legend]=\"lineChartLegend\"\r\n                [chartType]=\"lineChartType\"\r\n                (chartHover)=\"chartHovered($event)\"\r\n                (chartClick)=\"chartClicked($event)\">\r\n              </canvas>\r\n            </div>\r\n          </div>\r\n        </accordion-group>\r\n      </ng-template>\r\n    </ngb-panel>\r\n  <ngb-panel title=\"2008\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2008\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2008\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n  <ngb-panel title=\"2007\">\r\n    <ng-template ngbPanelContent>\r\n      <accordion-group heading=\"Année 2007\">\r\n        <div class=\"lineGraph\">\r\n          <div style=\"display: block;\">\r\n            <canvas baseChart width=\"800\" height=\"200\"\r\n              [datasets]=\"lineChartData2007\"\r\n              [labels]=\"lineChartLabels\"\r\n              [options]=\"lineChartOptions\"\r\n              [colors]=\"lineChartColors\"\r\n              [legend]=\"lineChartLegend\"\r\n              [chartType]=\"lineChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\">\r\n            </canvas>\r\n          </div>\r\n        </div>\r\n      </accordion-group>\r\n    </ng-template>\r\n  </ngb-panel>\r\n</ngb-accordion>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -398,7 +500,7 @@ module.exports = "\r\n  <h5 style=\"text-align: center;\" >Graphe mensuel par an
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GraphComponent", function() { return GraphComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var _services_rest_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/rest.service */ "./src/app/services/rest.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -469,7 +571,13 @@ var GraphComponent = /** @class */ (function () {
         ];
         this.lineChartLabels = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
         this.lineChartOptions = {
-            responsive: true
+            scales: {
+                yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+            }
         };
         this.lineChartColors = [
             {
@@ -586,7 +694,7 @@ var GraphComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./graph.component.html */ "./src/app/app-graph/graph.component.html"),
             styles: [__webpack_require__(/*! ./graph.component.css */ "./src/app/app-graph/graph.component.css")]
         }),
-        __metadata("design:paramtypes", [_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"]])
+        __metadata("design:paramtypes", [_services_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"]])
     ], GraphComponent);
     return GraphComponent;
 }());
@@ -602,7 +710,7 @@ var GraphComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -666,7 +774,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\n  background-color: #00ff00;\r\n  height: 500px;\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  position: relative;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLWhvbWUvaG9tZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJFQUFFO0VBQ0Esc0NBQTZEO0VBQzdELDBCQUEwQjtFQUMxQixjQUFjO0VBQ2QsNEJBQTRCO0VBQzVCLDZCQUE2QjtFQUM3Qix1QkFBdUI7RUFDdkIsbUJBQW1CO0NBQ3BCIiwiZmlsZSI6InNyYy9hcHAvYXBwLWhvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiICAuaG9tZS1pbWFnZSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiYXNzZXRzL2ltYWdlcy9jYXJvdXNlbC9EU0NfMDI0Ni5KUEdcIik7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAwZmYwMDtcclxuICBoZWlnaHQ6IDUwMHB4O1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59Il19 */"
+module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\n  background-color: #00ff00;\r\n  height: 500px;\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  position: relative;\r\n}\r\n.input-group-btn{}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiRUFBRTtFQUNBLHNDQUE2RDtFQUM3RCwwQkFBMEI7RUFDMUIsY0FBYztFQUNkLDRCQUE0QjtFQUM1Qiw2QkFBNkI7RUFDN0IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtDQUNwQjtBQUNELGtCQUFrQiIsImZpbGUiOiJhcHAtaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgIC5ob21lLWltYWdlIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCJhc3NldHMvaW1hZ2VzL2Nhcm91c2VsL0RTQ18wMjQ2LkpQR1wiKTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBmZjAwO1xyXG4gIGhlaWdodDogNTAwcHg7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuLmlucHV0LWdyb3VwLWJ0bnt9Il19 */"
 
 /***/ }),
 
@@ -677,7 +785,7 @@ module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!-- <div class=\"home-image\"> -->\r\n<section class=\"container\">\r\n\r\n\t\r\n\t\t<div style=\"width: 86%; text-align: center;\">\r\n\t\t\t<h5>Précipitations annuelles depuis 2007</h5>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 60%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartData\" [labels]=\"barChartLabels\"\r\n\t\t\t\t[options]=\"barChartOptions\" [legend]=\"barChartLegend\"\r\n\t\t\t\t[colors]=\"barChartColors\" [chartType]=\"barChartType\">\r\n        \t</canvas>\r\n\t\t</div>\r\n\t\t\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 30%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartDataDay\" [labels]=\"barChartLabelsDay\"\r\n\t\t\t\t[options]=\"barChartOptionsDay\" [legend]=\"barChartLegendDay\"\r\n\t\t\t\t[colors]=\"barChartColorsDay\" [chartType]=\"barChartTypeDay\">\r\n        \t</canvas>\r\n\t\t</div>\r\n\r\n\r\n\r\n\t<!--   <ul class=\"years\">\r\n        <li *ngFor=\"let year of years;\">\r\n               Annee: {{year.annee}}\r\n        </li>\r\n    </ul> -->\r\n</section>\r\n<!-- </div> -->\r\n"
+module.exports = "\r\n<!-- <div class=\"home-image\"> -->\r\n<section class=\"container\">\r\n\t\r\n\t\t<div style=\"width: 86%; text-align: center;\">\r\n\t\t\t<h5>Précipitations annuelles depuis 2007</h5>\r\n\t\t</div>\r\n\r\n\t\t<div class=\"barChart\"\r\n\t\t\tstyle=\"width: 80%; height: 60%; display: inline-block; margin-top: 5%; margin-left: 0px\">\r\n\t\t\t<canvas baseChart [datasets]=\"barChartData\" [labels]=\"barChartLabels\"\r\n\t\t\t\t[options]=\"barChartOptions\" [legend]=\"barChartLegend\"\r\n\t\t\t\t[colors]=\"barChartColors\" [chartType]=\"barChartType\">\r\n        \t</canvas>\r\n\t\t</div>\r\n"
 
 /***/ }),
 
@@ -692,7 +800,7 @@ module.exports = "\r\n<!-- <div class=\"home-image\"> -->\r\n<section class=\"co
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var _services_rest_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/rest.service */ "./src/app/services/rest.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -714,8 +822,6 @@ var HomeComponent = /** @class */ (function () {
         this.years = [];
         this.labels = [];
         this.dataValues = new Array();
-        this.labelsDay = [];
-        this.dataValuesDay = new Array();
         this.barChartLabels = this.labels;
         this.barChartType = 'bar';
         this.Day = false;
@@ -730,6 +836,7 @@ var HomeComponent = /** @class */ (function () {
         };
         this.chartHovered = '';
         this.chartClicked = '';
+        this.barChartLegend = '';
         this.barChartColors = [{
                 backgroundColor: '#00008B',
                 hoverBackgroundColor: '#1E90FF'
@@ -737,35 +844,10 @@ var HomeComponent = /** @class */ (function () {
         this.barChartData = [
             { dataValues: this.dataValues, label: 'Pluie en mm' },
         ];
-        this.barChartLabelsDay = this.labelsDay;
-        this.barChartTypeDay = 'bar';
-        this.barChartLegendDay = true;
-        this.barChartOptionsDay = {
-            scales: {
-                yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            min: 0,
-                            sugestedMax: 50
-                        }
-                    }]
-            }
-        };
-        this.chartHoveredDay = '';
-        this.chartClickedDay = '';
-        this.barChartColorsDay = [{
-                backgroundColor: '#00BFFF',
-                hoverBackgroundColor: '#00008B'
-            }];
-        this.barChartDataDay = [
-            //                                  { labelsDay: this.labelsDay, label: 'Jour' },    
-            { dataValuesDay: this.dataValuesDay, label: 'Pluie par jour en mm' },
-        ];
     }
     HomeComponent.prototype.ngOnInit = function () {
         this.getListYear();
         this.getValuesByYear();
-        this.getValueByDayForMonthByYear();
     };
     HomeComponent.prototype.getListYear = function () {
         var _this = this;
@@ -778,7 +860,7 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.getValuesByYear = function () {
         var _this = this;
         this.rest.getValuesByYear().subscribe(function (result) {
-            console.log(result);
+            console.log("**** valuesByYear " + result);
             _this.chartData = [];
             for (var i = 0; i < result.length; i++) {
                 _this.dataValues.push(result[i].valeur);
@@ -789,27 +871,13 @@ var HomeComponent = /** @class */ (function () {
             _this.barChartData = _this.dataValues;
         });
     };
-    HomeComponent.prototype.getValueByDayForMonthByYear = function () {
-        var _this = this;
-        this.rest.getvalueByDayForMonthByYear().subscribe(function (resultData) {
-            console.log(resultData);
-            _this.chartDataDay = [];
-            for (var i = 0; i < resultData.length; i++) {
-                _this.dataValuesDay.push(resultData[i].valeur);
-                _this.labelsDay.push((resultData[i].jour));
-                _this.chartDataDay.push([(resultData[i].jour), resultData[i].valeur]);
-            }
-            _this.barChartLabelsDay = _this.labelsDay;
-            _this.barChartDataDay = _this.dataValuesDay;
-        });
-    };
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-home',
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/app-home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/app-home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        __metadata("design:paramtypes", [_services_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -825,7 +893,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {\r\n  width: 200px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n  position: -webkit-sticky;\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLW1haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0NBQ2Q7O0FBRUQ7RUFDRSxhQUFhO0NBQ2Q7O0FBRUQ7RUFDRSx5QkFBaUI7RUFBakIsaUJBQWlCO0VBQ2pCLE9BQU87Q0FDUiIsImZpbGUiOiJzcmMvYXBwL2FwcC1tYWluLW5hdi9tYWluLW5hdi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNpZGVuYXYtY29udGFpbmVyIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbi5zaWRlbmF2IHtcclxuICB3aWR0aDogMjAwcHg7XHJcbn1cclxuXHJcbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XHJcbiAgcG9zaXRpb246IHN0aWNreTtcclxuICB0b3A6IDA7XHJcbn1cclxuIl19 */"
+module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {\r\n  width: 200px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n  position: -webkit-sticky;\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1tYWluLW5hdi9tYWluLW5hdi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UseUJBQWlCO0VBQWpCLGlCQUFpQjtFQUNqQixPQUFPO0NBQ1IiLCJmaWxlIjoiYXBwLW1haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZW5hdi1jb250YWluZXIge1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLnNpZGVuYXYge1xyXG4gIHdpZHRoOiAyMDBweDtcclxufVxyXG5cclxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcclxuICBwb3NpdGlvbjogc3RpY2t5O1xyXG4gIHRvcDogMDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -836,7 +904,7 @@ module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"sidenav-container\">\r\n  <mat-sidenav\r\n    #drawer\r\n    class=\"sidenav\"\r\n    fixedInViewport=\"true\"\r\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\r\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\r\n    [opened]=\"!(isHandset$ | async)\">\r\n    <mat-toolbar color=\"primary\">{{title}}</mat-toolbar>\r\n    <mat-nav-list>\r\n      <a mat-list-item routerLink=\"/\">Accueil</a>\r\n      <a mat-list-item routerLink=\"/graph\">Graph</a>\r\n      <a mat-list-item routerLink=\"/relevepluie\">RelevePluie</a>\r\n      <a mat-list-item routerLink=\"/photos\">Photos</a>\r\n    </mat-nav-list>\r\n  </mat-sidenav>\r\n  <mat-sidenav-content>\r\n    <mat-toolbar color=\"primary\">\r\n      <button\r\n        type=\"button\"\r\n        aria-label=\"Toggle sidenav\"\r\n        mat-icon-button\r\n        (click)=\"drawer.toggle()\"\r\n        *ngIf=\"isHandset$ | async\">\r\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\r\n      </button>\r\n     <!--span>Application Title</span-->\r\n    </mat-toolbar>\r\n    <router-outlet></router-outlet>\r\n    <!-- Add Content Here -->\r\n  </mat-sidenav-content>\r\n</mat-sidenav-container>\r\n"
+module.exports = "<mat-sidenav-container class=\"sidenav-container\">\r\n<router-outlet></router-outlet>\r\n  <mat-sidenav\r\n    #drawer\r\n    class=\"sidenav\"\r\n    fixedInViewport=\"true\"\r\n    [attr.role]=\"(isHandset$ | async) ? 'dialog' : 'navigation'\"\r\n    [mode]=\"(isHandset$ | async) ? 'over' : 'side'\"\r\n    [opened]=\"!(isHandset$ | async)\">\r\n    <mat-toolbar color=\"primary\">{{title}}</mat-toolbar>\r\n    <mat-nav-list>\r\n      <a mat-list-item routerLink=\"/\">Accueil</a>\r\n      <a mat-list-item routerLink=\"/graph\">Graph</a>\r\n      <a mat-list-item routerLink=\"/relevepluie\">RelevePluie</a>\r\n      <a mat-list-item routerLink=\"/photos\">Photos</a>\r\n    </mat-nav-list>\r\n  </mat-sidenav>\r\n  <mat-sidenav-content>\r\n    <mat-toolbar color=\"primary\">\r\n      <button\r\n        type=\"button\"\r\n        aria-label=\"Toggle sidenav\"\r\n        mat-icon-button\r\n        (click)=\"drawer.toggle()\"\r\n        *ngIf=\"isHandset$ | async\">\r\n        <mat-icon aria-label=\"Side nav toggle icon\">menu</mat-icon>\r\n      </button>\r\n     <!--span>Application Title</span-->\r\n    </mat-toolbar>\r\n    <router-outlet></router-outlet>\r\n    <!-- Add Content Here -->\r\n  </mat-sidenav-content>\r\n</mat-sidenav-container>\r\n"
 
 /***/ }),
 
@@ -894,7 +962,7 @@ var MainNavComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1waG90b3MvcGhvdG9zLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtcGhvdG9zL3Bob3Rvcy5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -968,7 +1036,7 @@ var PhotosComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.relevepluie-dernierReleve{\r\n    text-align: center; \r\n  } \r\n\r\n\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLXJlbGV2ZXBsdWllL3JlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7Q0FDdEI7O0FBRUQ7SUFDSSxtQkFBbUI7R0FDcEIiLCJmaWxlIjoic3JjL2FwcC9hcHAtcmVsZXZlcGx1aWUvcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5yZWxldmVwbHVpZS10aXRyZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5yZWxldmVwbHVpZS1kZXJuaWVyUmVsZXZle1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyOyBcclxuICB9IFxyXG5cclxuXHJcbiAgIl19 */"
+module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.relevepluie-dernierReleve{\r\n    text-align: center; \r\n  } \r\n\r\n\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1yZWxldmVwbHVpZS9yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVEO0lBQ0ksbUJBQW1CO0dBQ3BCIiwiZmlsZSI6ImFwcC1yZWxldmVwbHVpZS9yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnJlbGV2ZXBsdWllLXRpdHJlIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnJlbGV2ZXBsdWllLWRlcm5pZXJSZWxldmV7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7IFxyXG4gIH0gXHJcblxyXG5cclxuICAiXX0= */"
 
 /***/ }),
 
@@ -979,7 +1047,7 @@ module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"relevepluie-titre\">Releve pluie!</h2>\r\n\r\n<div class=\"relevepluie-dernierReleve\" >\r\n\t<label for=\"value\">Dernier releve : </label> {{lastvalue.valeur}} mm - le: {{lastvalue.jour}}-{{lastvalue.mois}}-{{lastvalue.annee}}\r\n</div>\r\n<div [hidden]=\"submitted\" style=\"width: 300px;margin-left: 38.5%;\">\r\n\t<form (ngSubmit)=\"onSubmit()\">\r\n\t  <div class=\"form-group\">\r\n\t\t<label for=\"date\">Date</label>\r\n\t\t<input type=\"date\" class=\"form-control\" id=\"date\" required [(ngModel)]=\"relevepluie.date\" name=\"name\">\r\n\t  </div>\r\n  \r\n\t  <div class=\"form-group\">\r\n\t\t<label for=valeur>Valeur</label>\r\n\t\t<input type=\"text\" class=\"form-control\" id=\"valeur\" required [(ngModel)]=\"relevepluie.valeur\" name=\"valeur\">\r\n\t  </div>\r\n  \r\n\t\t<nav>\r\n\t\t\t<button type=\"submit\" class=\"btn btn-success mr-2\">Submit</button>\r\n\t\t\t<a routerLink=\"search\"\tclass=\"btn btn-info active\" role=\"button\" routerLinkActive=\"active\">Search</a>\r\n\t</nav>\r\n\t\t</form>\r\n\t\t\r\n  </div>\r\n  \r\n  <div [hidden]=\"!submitted\" style=\"margin-left: 38.5%;\">\r\n\t<h4>Ajouter avec success !!</h4>\r\n\t<button class=\"btn btn-success\" (click)=\"newRelevepluie()\">Add</button>\r\n  </div>\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<h2 class=\"relevepluie-titre\">Relevé pluie!</h2>\r\n\r\n<div class=\"relevepluie-dernierReleve\">\r\n\t<label for=\"value\">Dernier releve : </label> {{lastvalue.valeur}} mm -\r\n\tle: {{lastvalue.jour}}-{{lastvalue.mois}}-{{lastvalue.annee}}\r\n</div>\r\n<div [hidden]=\"submitted\" style=\"width: 300px; margin-left: 38.5%;\">\r\n\r\n\t<button routerLink=\"add\" class=\"btn btn-success mr-2\" role=\"button\"\r\n\t\trouterLinkActive=\"active\">Ajouter</button>\r\n\t<a routerLink=\"search\" class=\"btn btn-info active\" role=\"button\"\r\n\t\trouterLinkActive=\"active\">Search</a>\r\n</div>\r\n\r\n<div [hidden]=\"submitted\" class=\"container\"\r\n\tstyle=\"width: 40%; margin-top: 2%; margin-left: 14.5%;\">\r\n\t<h5>Chercher le mois et l'année de votre choix</h5>\r\n\t<form action=\"/action_page.php\">\r\n\t\t<div class=\"input-group\">\r\n\t\t\t<input type=\"number\" min=\"1\" max=\"31\" style=\"width: 30%;\"\r\n\t\t\t\tclass=\"form-control\" placeholder=\"mois\" name=\"mois\"\r\n\t\t\t\t[(ngModel)]=\"mois\"> <input type=\"number\" min=\"2007\"\r\n\t\t\t\tmax=\"2020\" style=\"width: 30%;\" class=\"form-control\"\r\n\t\t\t\tplaceholder=\"Année\" name=\"annee\" [(ngModel)]=\"annee\">\r\n\t\t\t<div class=\"input-group-btn\"\r\n\t\t\t\tstyle=\"display: inline-block; margin-left: 10px;\">\r\n\t\t\t\t<button type=\"submit\" (click)=\"searchByMonthByYear()\"\r\n\t\t\t\t\tclass=\"btn btn-success mr-2\">Search</button>\r\n\t\t\t\t<!--         <button class=\"btn btn-default\" type=\"submit\"> -->\r\n\t\t\t\t<!--         <i class=\"glyphicon glyphicon-search\"></i> -->\r\n\t\t\t\t<!--         </button> -->\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</form>\r\n</div>\r\n<div class=\"barChart\"\r\n\tstyle=\"width: 800px; height: 300px; display: inline-block; margin-top: 2%; margin-left: 10%\">\r\n\t<canvas baseChart [datasets]=\"barChartDataDay\"\r\n\t\t[labels]=\"barChartLabelsDay\" [options]=\"barChartOptionsDay\"\r\n\t\t[legend]=\"barChartLegendDay\" [colors]=\"barChartColorsDay\"\r\n\t\t[chartType]=\"barChartTypeDay\">\r\n        \t</canvas>\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -994,9 +1062,9 @@ module.exports = "<h2 class=\"relevepluie-titre\">Releve pluie!</h2>\r\n\r\n<div
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RelevepluieComponent", function() { return RelevepluieComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var _services_rest_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/rest.service */ "./src/app/services/rest.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _relevepluie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../relevepluie */ "./src/app/relevepluie.ts");
+/* harmony import */ var _models_relevepluie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../models/relevepluie */ "./src/app/models/relevepluie.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1016,8 +1084,33 @@ var RelevepluieComponent = /** @class */ (function () {
         this.route = route;
         this.router = router;
         this.lastvalue = [];
-        this.relevepluie = new _relevepluie__WEBPACK_IMPORTED_MODULE_3__["Relevepluie"]();
+        this.relevepluie = new _models_relevepluie__WEBPACK_IMPORTED_MODULE_3__["Relevepluie"]();
         this.submitted = false;
+        this.labelsDay = [];
+        this.dataValuesDay = new Array();
+        this.barChartLabelsDay = this.labelsDay;
+        this.barChartTypeDay = 'bar';
+        this.barChartLegendDay = true;
+        this.barChartOptionsDay = {
+            scales: {
+                yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            min: 0,
+                            sugestedMax: 50
+                        }
+                    }]
+            }
+        };
+        this.chartHoveredDay = '';
+        this.chartClickedDay = '';
+        this.barChartColorsDay = [{
+                backgroundColor: '#00BFFF',
+                hoverBackgroundColor: '#00008B'
+            }];
+        this.barChartDataDay = [
+            { dataValuesDay: this.dataValuesDay, label: 'Pluie par jour en mm' },
+        ];
     }
     RelevepluieComponent.prototype.getLastValues = function () {
         var _this = this;
@@ -1025,24 +1118,29 @@ var RelevepluieComponent = /** @class */ (function () {
         this.restService.getLastValues().subscribe(function (data) {
             console.log(data);
             _this.lastvalue = data;
+            _this.getValueByDayForMonthByYear(_this.lastvalue.annee, _this.lastvalue.mois);
         });
     };
     RelevepluieComponent.prototype.ngOnInit = function () {
         this.getLastValues();
     };
-    RelevepluieComponent.prototype.newRelevepluie = function () {
-        this.submitted = false;
-        this.relevepluie = new _relevepluie__WEBPACK_IMPORTED_MODULE_3__["Relevepluie"]();
-        this.getLastValues();
+    RelevepluieComponent.prototype.searchByMonthByYear = function () {
+        this.barChartDataDay = [];
+        this.barChartLabelsDay = [];
     };
-    RelevepluieComponent.prototype.addRelevepluie = function () {
-        this.restService.addRelevepluie(this.relevepluie)
-            .subscribe(function (data) { return console.log(data); }, function (error) { return console.log(error); });
-        this.relevepluie = new _relevepluie__WEBPACK_IMPORTED_MODULE_3__["Relevepluie"]();
-    };
-    RelevepluieComponent.prototype.onSubmit = function () {
-        this.submitted = true;
-        this.addRelevepluie();
+    RelevepluieComponent.prototype.getValueByDayForMonthByYear = function (annee, mois) {
+        var _this = this;
+        this.restService.getValueByDayForMonthByYear(annee, mois).subscribe(function (resultData) {
+            console.log("**** getValueByDayForMonthByYear");
+            for (var i = 0; i < resultData.length; i++) {
+                _this.dataValuesDay.push(resultData[i].valeur);
+                _this.labelsDay.push((resultData[i].jour));
+                _this.barChartDataDay.push([(resultData[i].jour), resultData[i].valeur]);
+            }
+            console.log("labelsDay :" + _this.labelsDay);
+            _this.barChartLabelsDay = _this.labelsDay;
+            _this.barChartDataDay = _this.dataValuesDay;
+        });
     };
     RelevepluieComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1050,7 +1148,7 @@ var RelevepluieComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./relevepluie.component.html */ "./src/app/app-relevepluie/relevepluie.component.html"),
             styles: [__webpack_require__(/*! ./relevepluie.component.css */ "./src/app/app-relevepluie/relevepluie.component.css")]
         }),
-        __metadata("design:paramtypes", [_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+        __metadata("design:paramtypes", [_services_rest_service__WEBPACK_IMPORTED_MODULE_1__["RestService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], RelevepluieComponent);
     return RelevepluieComponent;
 }());
@@ -1078,6 +1176,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_relevepluie_relevepluie_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-relevepluie/relevepluie.component */ "./src/app/app-relevepluie/relevepluie.component.ts");
 /* harmony import */ var _app_photos_photos_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-photos/photos.component */ "./src/app/app-photos/photos.component.ts");
 /* harmony import */ var _app_search_relevepluie_search_relevepluie_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-search-relevepluie/search-relevepluie.component */ "./src/app/app-search-relevepluie/search-relevepluie.component.ts");
+/* harmony import */ var _app_add_relevepluie_add_relevepluie_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-add-relevepluie/add-relevepluie.component */ "./src/app/app-add-relevepluie/add-relevepluie.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1092,13 +1191,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     { path: "", redirectTo: 'home', pathMatch: 'full' },
     { path: "home", component: _app_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
     { path: "graph", component: _app_graph_graph_component__WEBPACK_IMPORTED_MODULE_4__["GraphComponent"] },
     { path: "relevepluie", component: _app_relevepluie_relevepluie_component__WEBPACK_IMPORTED_MODULE_5__["RelevepluieComponent"] },
     { path: "photos", component: _app_photos_photos_component__WEBPACK_IMPORTED_MODULE_6__["PhotosComponent"] },
-    { path: 'relevepluie/search', component: _app_search_relevepluie_search_relevepluie_component__WEBPACK_IMPORTED_MODULE_7__["SearchRelevepluieComponent"] }
+    { path: 'relevepluie/search', component: _app_search_relevepluie_search_relevepluie_component__WEBPACK_IMPORTED_MODULE_7__["SearchRelevepluieComponent"] },
+    { path: 'relevepluie/add', component: _app_add_relevepluie_add_relevepluie_component__WEBPACK_IMPORTED_MODULE_8__["AddRelevepluieComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -1129,7 +1230,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\r\n.ng-valid { border-color: green; }\r\n\r\n.ng-invalid { border-color: red; }    \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLXNlYXJjaC1yZWxldmVwbHVpZS9zZWFyY2gtcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxtQkFBbUI7Q0FDdEI7O0FBRUQsWUFBWSxvQkFBb0IsRUFBRTs7QUFDbEMsY0FBYyxrQkFBa0IsRUFBRSIsImZpbGUiOiJzcmMvYXBwL2FwcC1zZWFyY2gtcmVsZXZlcGx1aWUvc2VhcmNoLXJlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLnJlbGV2ZXBsdWllLXNlYXJjaHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjsgXHJcbn1cclxuXHJcbi5uZy12YWxpZCB7IGJvcmRlci1jb2xvcjogZ3JlZW47IH1cclxuLm5nLWludmFsaWQgeyBib3JkZXItY29sb3I6IHJlZDsgfSAgICBcclxuIl19 */"
+module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\r\n.ng-valid { border-color: green; }\r\n\r\n.ng-invalid { border-color: red; }    \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1zZWFyY2gtcmVsZXZlcGx1aWUvc2VhcmNoLXJlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVELFlBQVksb0JBQW9CLEVBQUU7O0FBQ2xDLGNBQWMsa0JBQWtCLEVBQUUiLCJmaWxlIjoiYXBwLXNlYXJjaC1yZWxldmVwbHVpZS9zZWFyY2gtcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucmVsZXZlcGx1aWUtc2VhcmNoe1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyOyBcclxufVxyXG5cclxuLm5nLXZhbGlkIHsgYm9yZGVyLWNvbG9yOiBncmVlbjsgfVxyXG4ubmctaW52YWxpZCB7IGJvcmRlci1jb2xvcjogcmVkOyB9ICAgIFxyXG4iXX0= */"
 
 /***/ }),
 
@@ -1140,7 +1241,7 @@ module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"width: 300px;margin-left: 38.5%;\">\r\n\t<form (ngSubmit)=\"onSubmit()\" #searchForm=\"ngForm\" [style.visibility]=\"isSearchDivVisible ? 'visible' : 'hidden'\">\r\n\t  <h3 class=\"relevepluie-search\">Chercher par date</h3>\r\n\t\t<div class=\"form-group\">\r\n\t\t\t<label for=\"date\">Date</label> <input type=\"text\"\r\n\t\t\tclass=\"form-control\" id=\"date\" required [(ngModel)]=\"date\"\r\n\t\t\tname=\"date\" type=\"date\">\r\n\t\t</div>\r\n\r\n\t\t\t<div class=\"btn-group\">\r\n\t\t\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\r\n\t\t\t\t<button type=\"submit\" class=\"btn btn-success\"  [disabled]=\"!searchForm.form.valid\" formaction=\"/details\">Submit</button>\t\r\n\t\t\t</div>\r\n\t</form>\r\n</div>\r\n\r\n<div style=\"width: 300px;margin-left: 38.5%;margin-top: -10%\" >\r\n\t<form [style.visibility]=\"isDetailDivVisible ? 'visible' : 'hidden'\">\r\n\t  <h3 class=\"relevepluie-detail\">Date sélectionnée</h3>\r\n\t  <div *ngIf=\"relevepluie\"> \r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=id>Id</label> \r\n\t\t\t\t<input [disabled]=true type=\"text\" class=\"form-control\" id=\"id\" [(ngModel)]=\"relevepluie.id\" name=\"id\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=Date>Date</label> \r\n\t\t\t\t<input [disabled]=true type=\"text\" class=\"form-control\" id=\"date\"  [(ngModel)]=\"relevepluie.date\" name=\"date\">\r\n\t\t\t </div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=valeur>Valeur</label> \r\n\t\t\t\t<input id=\"valeur\" type=\"text\" class=\"form-control\" [(ngModel)]=\"relevepluie.valeur\" name=\"valeur\">\r\n\t\t\t</div>\t\t\r\n\t\t</div>\r\n  \r\n\t\t  <div class=\"btn-group\">\r\n\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\r\n\t\t<button class=\"btn btn-success mr-2\"  (click)=\"updateRelevepluie(relevepluie)\" >Update</button>\r\n\t\t<button class=\"btn btn-danger\" (click)=\"deleteRelevepluie()\">Delete</button>\r\n\t  </div>\r\n\t</form>\r\n\t</div>\t\r\n\r\n\t\t\r\n\r\n\r\n\r\n\t\t\r\n\t\t\r\n\t\t\r\n\r\n\t"
+module.exports = "\t<div [hidden]=\"!deleted\" style=\"margin-left: 38.5%;\">\r\n\t\t<h4>Supprimer avec success !!</h4>\r\n\t<button class=\"btn btn-success\" (click)=\"deleteRelevepluie(relevepluie.id)\">Delete</button>\r\n  </div>\r\n  \r\n  \t<div [hidden]=\"!updated\" style=\"margin-left: 38.5%;\">\r\n\t\t<h4>Modifier avec success !!</h4>\r\n\t<button class=\"btn btn-success\" (click)=\"updateRelevepluie(relevepluie)\">Update</button>\r\n  </div>\r\n\r\n<div style=\"width: 300px;margin-left: 38.5%;\">\r\n\t<form #searchForm=\"ngForm\" [style.visibility]=\"isSearchDivVisible ? 'visible' : 'hidden'\">\r\n\t  <h3 class=\"relevepluie-search\">Chercher par date</h3>\r\n\t\t<div class=\"form-group\">\r\n\t\t\t<label for=\"date\">Date</label>\r\n\t\t\t <input type=\"text\" class=\"form-control\" id=\"date\" required [(ngModel)]=\"date\" \tname=\"date\" type=\"date\">\r\n\t\t</div>\r\n\t\r\n\t\t<div class=\"btn-group\">\r\n\t\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\r\n\t\t\t<button type=\"submit\" class=\"btn btn-success\"  [disabled]=\"!searchForm.form.valid\"  (click)=getRelevepluieByDate(date)>Submit</button>\t\r\n\t\t</div>\r\n\t</form>\r\n</div>\r\n\r\n<div style=\"width: 300px;margin-left: 38.5%;margin-top: -10%\" >\r\n\t<form [hidden]=\"deleted\" [hidden]=\"updated\" [style.visibility]=\"isDetailDivVisible ? 'visible' : 'hidden'\">\r\n\t  <h3 class=\"relevepluie-detail\">Date sélectionnée</h3>\r\n\t  <div *ngIf=\"relevepluie\"> \r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=id>Id</label> \r\n\t\t\t\t<input [disabled]=true type=\"text\" class=\"form-control\" id=\"id\" [(ngModel)]=\"relevepluie.id\" name=\"id\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=Date>Date</label> \r\n\t\t\t\t<input [disabled]=true class=\"form-control\" type=\"text\" id=\"date\"  [(ngModel)]=\"relevepluie.date\" name=\"date\">\r\n\t\t\t </div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=valeur>Valeur</label> \r\n\t\t\t\t<input id=\"valeur\" type=\"text\" class=\"form-control\" [(ngModel)]=\"relevepluie.valeur\" name=\"valeur\">\r\n\t\t\t</div>\t\t\r\n\t\t</div>\r\n\t\t<button class=\"btn btn-primary mr-2\" (click)=\"goBack()\">Back</button>\r\n\t\t<button class=\"btn btn-success mr-2\"  (click)=\"onUpdate('Updated')\" >Update</button>\r\n\t\t<button  class=\"btn btn-danger\" (click)=\"onDelete('Deleted')\">Delete</button>\r\n\t </form>\r\n\t</div>\t\r\n\t\r\n\r\n\t\t\r\n\r\n\r\n\r\n\t\t\r\n\t\t\r\n\t\t\r\n\r\n\t"
 
 /***/ }),
 
@@ -1156,7 +1257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchRelevepluieComponent", function() { return SearchRelevepluieComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _rest_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rest.service */ "./src/app/rest.service.ts");
+/* harmony import */ var _services_rest_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/rest.service */ "./src/app/services/rest.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1178,15 +1279,19 @@ var SearchRelevepluieComponent = /** @class */ (function () {
         this.location = location;
         this.isDetailDivVisible = false;
         this.isSearchDivVisible = true;
+        this.deleted = false;
+        this.updated = false;
         this.lastvalue = [];
     }
     SearchRelevepluieComponent.prototype.ngOnInit = function () {
         this.date = '';
         this.isDetailDivVisible = false;
     };
-    SearchRelevepluieComponent.prototype.getRelevepluieByDate = function () {
+    SearchRelevepluieComponent.prototype.getRelevepluieByDate = function (date) {
         var _this = this;
         this.restService.getRelevepluieByDate(this.date).subscribe(function (relevepluie) { return _this.relevepluie = relevepluie; });
+        this.isDetailDivVisible = true;
+        this.isSearchDivVisible = false;
     };
     //  newUpdaterelevepluie(): void {
     //  this.relevepluie = new Relevepluie();
@@ -1200,23 +1305,32 @@ var SearchRelevepluieComponent = /** @class */ (function () {
             console.log(data),
                 _this.relevepluie = data;
         }, function (error) { return console.log(error); });
+        this.location.back();
     };
-    SearchRelevepluieComponent.prototype.deleteRelevepluie = function () {
+    SearchRelevepluieComponent.prototype.deleteRelevepluie = function (id) {
         var _this = this;
         console.log(this.relevepluie.id);
         // this.dataService.deleteRelevepluie(this.relevepluie.id).then(() => this.goBack());
         this.restService.deleteRelevepluie(this.relevepluie.id)
             .subscribe(function () { return _this.message = "Relevepluie Supprimer avec Success!"; }),
             function (error) { return console.log(error); };
-        this.getRelevepluieByDate();
+        this.deleted = false;
+        this.location.back();
     };
     SearchRelevepluieComponent.prototype.goBack = function () {
         this.location.back();
     };
-    SearchRelevepluieComponent.prototype.onSubmit = function () {
-        this.isSearchDivVisible = false;
-        this.getRelevepluieByDate();
-        this.isDetailDivVisible = true;
+    SearchRelevepluieComponent.prototype.onDelete = function (buttonType) {
+        if (buttonType === "Deleted") {
+            this.deleted = true;
+            console.log(buttonType);
+        }
+    };
+    SearchRelevepluieComponent.prototype.onUpdate = function (buttonType) {
+        if (buttonType === "Updated") {
+            this.updated = true;
+            console.log(buttonType);
+        }
     };
     SearchRelevepluieComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1224,7 +1338,7 @@ var SearchRelevepluieComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./search-relevepluie.component.html */ "./src/app/app-search-relevepluie/search-relevepluie.component.html"),
             styles: [__webpack_require__(/*! ./search-relevepluie.component.css */ "./src/app/app-search-relevepluie/search-relevepluie.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _rest_service__WEBPACK_IMPORTED_MODULE_2__["RestService"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["Location"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _services_rest_service__WEBPACK_IMPORTED_MODULE_2__["RestService"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["Location"]])
     ], SearchRelevepluieComponent);
     return SearchRelevepluieComponent;
 }());
@@ -1241,7 +1355,7 @@ var SearchRelevepluieComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
@@ -1321,12 +1435,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_photos_photos_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./app-photos/photos.component */ "./src/app/app-photos/photos.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! .//app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_search_relevepluie_search_relevepluie_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./app-search-relevepluie/search-relevepluie.component */ "./src/app/app-search-relevepluie/search-relevepluie.component.ts");
+/* harmony import */ var _app_add_relevepluie_add_relevepluie_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./app-add-relevepluie/add-relevepluie.component */ "./src/app/app-add-relevepluie/add-relevepluie.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1360,7 +1476,8 @@ var AppModule = /** @class */ (function () {
                 _app_graph_graph_component__WEBPACK_IMPORTED_MODULE_14__["GraphComponent"],
                 _app_relevepluie_relevepluie_component__WEBPACK_IMPORTED_MODULE_15__["RelevepluieComponent"],
                 _app_photos_photos_component__WEBPACK_IMPORTED_MODULE_16__["PhotosComponent"],
-                _app_search_relevepluie_search_relevepluie_component__WEBPACK_IMPORTED_MODULE_18__["SearchRelevepluieComponent"]
+                _app_search_relevepluie_search_relevepluie_component__WEBPACK_IMPORTED_MODULE_18__["SearchRelevepluieComponent"],
+                _app_add_relevepluie_add_relevepluie_component__WEBPACK_IMPORTED_MODULE_19__["AddRelevepluieComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -1392,10 +1509,10 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/relevepluie.ts":
-/*!********************************!*\
-  !*** ./src/app/relevepluie.ts ***!
-  \********************************/
+/***/ "./src/app/models/relevepluie.ts":
+/*!***************************************!*\
+  !*** ./src/app/models/relevepluie.ts ***!
+  \***************************************/
 /*! exports provided: Relevepluie */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1412,10 +1529,10 @@ var Relevepluie = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/rest.service.ts":
-/*!*********************************!*\
-  !*** ./src/app/rest.service.ts ***!
-  \*********************************/
+/***/ "./src/app/services/rest.service.ts":
+/*!******************************************!*\
+  !*** ./src/app/services/rest.service.ts ***!
+  \******************************************/
 /*! exports provided: RestService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1423,10 +1540,9 @@ var Relevepluie = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RestService", function() { return RestService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1440,16 +1556,16 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-//const endpoint = 'http://localhost:8080/pluvio/';
-var endpoint = _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl;
+//import { environment } from 'environments/environment.prod';
+//const endpoint = environment.apiUrl;
+var endpoint = '/pluvio/';
 var httpOptions = {
-    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'
     })
 };
-var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
+var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
 var RestService = /** @class */ (function () {
     function RestService(http) {
         this.http = http;
@@ -1460,16 +1576,17 @@ var RestService = /** @class */ (function () {
     };
     // List Year
     RestService.prototype.getListYear = function () {
-        return this.http.get(endpoint + 'listYearRelevepluie').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.extractData));
+        return this.http.get(endpoint + 'listYearRelevepluie').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData));
     };
     RestService.prototype.getValuesByYear = function () {
-        return this.http.get(endpoint + 'byYearRelevepluie').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.extractData));
+        return this.http.get(endpoint + 'byYearRelevepluie').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData));
     };
     RestService.prototype.getLastValues = function () {
-        return this.http.get(endpoint + 'lastValueRelevepluie').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.extractData));
+        return this.http.get(endpoint + 'lastValueRelevepluie').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData));
     };
-    RestService.prototype.getvalueByDayForMonthByYear = function () {
-        return this.http.get(endpoint + 'valueByDayForMonthByYear').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.extractData));
+    RestService.prototype.getValueByDayForMonthByYear = function (annee, mois) {
+        console.log("getValueByDayForMonthByYear annee: " + annee + "," + "mois: " + mois);
+        return this.http.get(endpoint + 'listValueByDayForMonthByYear/' + annee + '/' + mois).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData));
     };
     RestService.prototype.addRelevepluie = function (relevepluie) {
         console.log(relevepluie);
@@ -1479,7 +1596,7 @@ var RestService = /** @class */ (function () {
         return this.http.get(endpoint + 'relevepluieByDate/' + date);
     };
     RestService.prototype.getTotalByMonthByYear = function (year) {
-        return this.http.get(endpoint + 'totalByMonthByYear/' + year).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(this.extractData));
+        return this.http.get(endpoint + 'totalByMonthByYear/' + year).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(this.extractData));
     };
     RestService.prototype.updateRelevepluie = function (value) {
         return this.http.put(endpoint + 'updateRelevepluie/', value);
@@ -1495,14 +1612,14 @@ var RestService = /** @class */ (function () {
             // TODO: better job of transforming error for user consumption
             console.log(operation + " failed: " + error.message);
             // Let the app keep running by returning an empty result.
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])(result);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(result);
         };
     };
     RestService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], RestService);
     return RestService;
 }());
@@ -1526,8 +1643,6 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    //  apiUrl: 'http://192.168.1.98:8080/pluvio/'
-    apiUrl: 'http://localhost:8080/pluvio/'
 };
 /*
  * In development mode, for easier debugging, you can ignore zone related error
