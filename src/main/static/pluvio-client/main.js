@@ -309,7 +309,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtYWRkLXJlbGV2ZXBsdWllL2FkZC1yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1hZGQtcmVsZXZlcGx1aWUvYWRkLXJlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -411,7 +411,7 @@ var AddRelevepluieComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -474,7 +474,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1ncmFwaC9ncmFwaC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -710,7 +710,7 @@ var GraphComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -774,7 +774,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\n  background-color: #00ff00;\r\n  height: 500px;\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  position: relative;\r\n}\r\n.input-group-btn{}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiRUFBRTtFQUNBLHNDQUE2RDtFQUM3RCwwQkFBMEI7RUFDMUIsY0FBYztFQUNkLDRCQUE0QjtFQUM1Qiw2QkFBNkI7RUFDN0IsdUJBQXVCO0VBQ3ZCLG1CQUFtQjtDQUNwQjtBQUNELGtCQUFrQiIsImZpbGUiOiJhcHAtaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgIC5ob21lLWltYWdlIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCJhc3NldHMvaW1hZ2VzL2Nhcm91c2VsL0RTQ18wMjQ2LkpQR1wiKTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDBmZjAwO1xyXG4gIGhlaWdodDogNTAwcHg7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuLmlucHV0LWdyb3VwLWJ0bnt9Il19 */"
+module.exports = "  .home-image {\r\n  background-image: url('DSC_0246.JPG');\r\n  background-color: #00ff00;\r\n  height: 500px;\r\n  background-position: center;\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  position: relative;\r\n}\r\n.input-group-btn{}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLWhvbWUvaG9tZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJFQUFFO0VBQ0Esc0NBQTZEO0VBQzdELDBCQUEwQjtFQUMxQixjQUFjO0VBQ2QsNEJBQTRCO0VBQzVCLDZCQUE2QjtFQUM3Qix1QkFBdUI7RUFDdkIsbUJBQW1CO0NBQ3BCO0FBQ0Qsa0JBQWtCIiwiZmlsZSI6InNyYy9hcHAvYXBwLWhvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiICAuaG9tZS1pbWFnZSB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiYXNzZXRzL2ltYWdlcy9jYXJvdXNlbC9EU0NfMDI0Ni5KUEdcIik7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAwZmYwMDtcclxuICBoZWlnaHQ6IDUwMHB4O1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcbi5pbnB1dC1ncm91cC1idG57fSJdfQ== */"
 
 /***/ }),
 
@@ -893,7 +893,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {\r\n  width: 200px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n  position: -webkit-sticky;\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1tYWluLW5hdi9tYWluLW5hdi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UsYUFBYTtDQUNkOztBQUVEO0VBQ0UseUJBQWlCO0VBQWpCLGlCQUFpQjtFQUNqQixPQUFPO0NBQ1IiLCJmaWxlIjoiYXBwLW1haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2lkZW5hdi1jb250YWluZXIge1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLnNpZGVuYXYge1xyXG4gIHdpZHRoOiAyMDBweDtcclxufVxyXG5cclxuLm1hdC10b29sYmFyLm1hdC1wcmltYXJ5IHtcclxuICBwb3NpdGlvbjogc3RpY2t5O1xyXG4gIHRvcDogMDtcclxufVxyXG4iXX0= */"
+module.exports = ".sidenav-container {\r\n  height: 100%;\r\n}\r\n\r\n.sidenav {\r\n  width: 200px;\r\n}\r\n\r\n.mat-toolbar.mat-primary {\r\n  position: -webkit-sticky;\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLW1haW4tbmF2L21haW4tbmF2LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0NBQ2Q7O0FBRUQ7RUFDRSxhQUFhO0NBQ2Q7O0FBRUQ7RUFDRSx5QkFBaUI7RUFBakIsaUJBQWlCO0VBQ2pCLE9BQU87Q0FDUiIsImZpbGUiOiJzcmMvYXBwL2FwcC1tYWluLW5hdi9tYWluLW5hdi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNpZGVuYXYtY29udGFpbmVyIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbi5zaWRlbmF2IHtcclxuICB3aWR0aDogMjAwcHg7XHJcbn1cclxuXHJcbi5tYXQtdG9vbGJhci5tYXQtcHJpbWFyeSB7XHJcbiAgcG9zaXRpb246IHN0aWNreTtcclxuICB0b3A6IDA7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -962,7 +962,7 @@ var MainNavComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtcGhvdG9zL3Bob3Rvcy5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\r\n  \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC1waG90b3MvcGhvdG9zLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -1036,7 +1036,7 @@ var PhotosComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.relevepluie-dernierReleve{\r\n    text-align: center; \r\n  } \r\n\r\n\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1yZWxldmVwbHVpZS9yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVEO0lBQ0ksbUJBQW1CO0dBQ3BCIiwiZmlsZSI6ImFwcC1yZWxldmVwbHVpZS9yZWxldmVwbHVpZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnJlbGV2ZXBsdWllLXRpdHJlIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuLnJlbGV2ZXBsdWllLWRlcm5pZXJSZWxldmV7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7IFxyXG4gIH0gXHJcblxyXG5cclxuICAiXX0= */"
+module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.relevepluie-dernierReleve{\r\n    text-align: center; \r\n  } \r\n\r\n\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLXJlbGV2ZXBsdWllL3JlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7Q0FDdEI7O0FBRUQ7SUFDSSxtQkFBbUI7R0FDcEIiLCJmaWxlIjoic3JjL2FwcC9hcHAtcmVsZXZlcGx1aWUvcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5yZWxldmVwbHVpZS10aXRyZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5yZWxldmVwbHVpZS1kZXJuaWVyUmVsZXZle1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyOyBcclxuICB9IFxyXG5cclxuXHJcbiAgIl19 */"
 
 /***/ }),
 
@@ -1047,7 +1047,7 @@ module.exports = ".relevepluie-titre {\r\n    text-align: center;\r\n}\r\n\r\n.r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"relevepluie-titre\">Relevé pluie!</h2>\r\n\r\n<div class=\"relevepluie-dernierReleve\">\r\n\t<label for=\"value\">Dernier releve : </label> {{lastvalue.valeur}} mm -\r\n\tle: {{lastvalue.jour}}-{{lastvalue.mois}}-{{lastvalue.annee}}\r\n</div>\r\n<div [hidden]=\"submitted\" style=\"width: 300px; margin-left: 38.5%;\">\r\n\r\n\t<button routerLink=\"add\" class=\"btn btn-success mr-2\" role=\"button\"\r\n\t\trouterLinkActive=\"active\">Ajouter</button>\r\n\t<a routerLink=\"search\" class=\"btn btn-info active\" role=\"button\"\r\n\t\trouterLinkActive=\"active\">Search</a>\r\n</div>\r\n\r\n<div [hidden]=\"submitted\" class=\"container\"\r\n\tstyle=\"width: 40%; margin-top: 2%; margin-left: 14.5%;\">\r\n\t<h5>Chercher le mois et l'année de votre choix</h5>\r\n\t<form action=\"/action_page.php\">\r\n\t\t<div class=\"input-group\">\r\n\t\t\t<input type=\"number\" min=\"1\" max=\"31\" style=\"width: 30%;\"\r\n\t\t\t\tclass=\"form-control\" placeholder=\"mois\" name=\"mois\"\r\n\t\t\t\t[(ngModel)]=\"mois\"> <input type=\"number\" min=\"2007\"\r\n\t\t\t\tmax=\"2020\" style=\"width: 30%;\" class=\"form-control\"\r\n\t\t\t\tplaceholder=\"Année\" name=\"annee\" [(ngModel)]=\"annee\">\r\n\t\t\t<div class=\"input-group-btn\"\r\n\t\t\t\tstyle=\"display: inline-block; margin-left: 10px;\">\r\n\t\t\t\t<button type=\"submit\" (click)=\"searchByMonthByYear()\"\r\n\t\t\t\t\tclass=\"btn btn-success mr-2\">Search</button>\r\n\t\t\t\t<!--         <button class=\"btn btn-default\" type=\"submit\"> -->\r\n\t\t\t\t<!--         <i class=\"glyphicon glyphicon-search\"></i> -->\r\n\t\t\t\t<!--         </button> -->\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</form>\r\n</div>\r\n<div class=\"barChart\"\r\n\tstyle=\"width: 800px; height: 300px; display: inline-block; margin-top: 2%; margin-left: 10%\">\r\n\t<canvas baseChart [datasets]=\"barChartDataDay\"\r\n\t\t[labels]=\"barChartLabelsDay\" [options]=\"barChartOptionsDay\"\r\n\t\t[legend]=\"barChartLegendDay\" [colors]=\"barChartColorsDay\"\r\n\t\t[chartType]=\"barChartTypeDay\">\r\n        \t</canvas>\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<h2 class=\"relevepluie-titre\">Relevé pluie!</h2>\r\n\r\n<div class=\"relevepluie-dernierReleve\">\r\n\t<label for=\"value\">Dernier releve : </label> {{lastvalue.valeur}} mm -\r\n\tle: {{lastvalue.jour}}-{{lastvalue.mois}}-{{lastvalue.annee}}\r\n</div>\r\n<div [hidden]=\"submitted\" style=\"width: 300px; margin-left: 38.5%;\">\r\n\r\n\t<button routerLink=\"add\" class=\"btn btn-success mr-2\" role=\"button\"\r\n\t\trouterLinkActive=\"active\">Ajouter</button>\r\n\t<a routerLink=\"search\" class=\"btn btn-info active\" role=\"button\"\r\n\t\trouterLinkActive=\"active\">Search</a>\r\n</div>\r\n\r\n<div class=\"container\"\r\n\tstyle=\"width: 40%; margin-top: 2%; margin-left: 14.5%;\">\r\n\t<h5>Chercher le mois et l'année de votre choix</h5>\r\n\t<form #searchForm=\"ngForm\">\r\n\t\t<div class=\"input-group\">\r\n\t\t\t<input type=\"number\" min=\"1\" max=\"31\" style=\"width: 30%;\" class=\"form-control\" placeholder=\"mois\" name=\"mois\" required [(ngModel)]=\"mois\">\r\n\t\t\t <input type=\"number\" min=\"2007\" max=\"2025\" style=\"width: 30%;\" class=\"form-control\" placeholder=\"Année\" name=\"annee\" required [(ngModel)]=\"annee\">\r\n\t\t\t<div class=\"input-group-btn\" style=\"display: inline-block; margin-left: 10px;\">\r\n\t\t\t\t<button class=\"btn btn-success mr-2\"  [disabled]=\"!searchForm.form.valid\" (click)=\"searchByMonthByYear(annee, mois)\">Search date</button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</form>\r\n</div>\r\n<div class=\"barChart\"\r\n\tstyle=\"width: 800px; height: 300px; display: inline-block; margin-top: 2%; margin-left: 10%\">\r\n\t<canvas baseChart [datasets]=\"barChartDataDay\"\r\n\t\t[labels]=\"barChartLabelsDay\" [options]=\"barChartOptionsDay\"\r\n\t\t[legend]=\"barChartLegendDay\" [colors]=\"barChartColorsDay\"\r\n\t\t[chartType]=\"barChartTypeDay\">\r\n        \t</canvas>\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -1112,6 +1112,15 @@ var RelevepluieComponent = /** @class */ (function () {
             { dataValuesDay: this.dataValuesDay, label: 'Pluie par jour en mm' },
         ];
     }
+    RelevepluieComponent.prototype.ngOnInit = function () {
+        this.getLastValues();
+    };
+    RelevepluieComponent.prototype.searchByMonthByYear = function (annee, mois) {
+        console.log("**** annee: " + annee + " mois: " + mois);
+        this.barChartDataDay = [0];
+        this.barChartLabelsDay = [0];
+        this.getValueByDayForMonthByYear(annee, mois);
+    };
     RelevepluieComponent.prototype.getLastValues = function () {
         var _this = this;
         this.lastvalue = [];
@@ -1121,15 +1130,9 @@ var RelevepluieComponent = /** @class */ (function () {
             _this.getValueByDayForMonthByYear(_this.lastvalue.annee, _this.lastvalue.mois);
         });
     };
-    RelevepluieComponent.prototype.ngOnInit = function () {
-        this.getLastValues();
-    };
-    RelevepluieComponent.prototype.searchByMonthByYear = function () {
-        this.barChartDataDay = [];
-        this.barChartLabelsDay = [];
-    };
     RelevepluieComponent.prototype.getValueByDayForMonthByYear = function (annee, mois) {
         var _this = this;
+        var resultData = [];
         this.restService.getValueByDayForMonthByYear(annee, mois).subscribe(function (resultData) {
             console.log("**** getValueByDayForMonthByYear");
             for (var i = 0; i < resultData.length; i++) {
@@ -1230,7 +1233,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\r\n.ng-valid { border-color: green; }\r\n\r\n.ng-invalid { border-color: red; }    \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC1zZWFyY2gtcmVsZXZlcGx1aWUvc2VhcmNoLXJlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVELFlBQVksb0JBQW9CLEVBQUU7O0FBQ2xDLGNBQWMsa0JBQWtCLEVBQUUiLCJmaWxlIjoiYXBwLXNlYXJjaC1yZWxldmVwbHVpZS9zZWFyY2gtcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4ucmVsZXZlcGx1aWUtc2VhcmNoe1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyOyBcclxufVxyXG5cclxuLm5nLXZhbGlkIHsgYm9yZGVyLWNvbG9yOiBncmVlbjsgfVxyXG4ubmctaW52YWxpZCB7IGJvcmRlci1jb2xvcjogcmVkOyB9ICAgIFxyXG4iXX0= */"
+module.exports = "\r\n.relevepluie-search{\r\n    text-align: center; \r\n}\r\n\r\n.ng-valid { border-color: green; }\r\n\r\n.ng-invalid { border-color: red; }    \r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLXNlYXJjaC1yZWxldmVwbHVpZS9zZWFyY2gtcmVsZXZlcGx1aWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxtQkFBbUI7Q0FDdEI7O0FBRUQsWUFBWSxvQkFBb0IsRUFBRTs7QUFDbEMsY0FBYyxrQkFBa0IsRUFBRSIsImZpbGUiOiJzcmMvYXBwL2FwcC1zZWFyY2gtcmVsZXZlcGx1aWUvc2VhcmNoLXJlbGV2ZXBsdWllLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuLnJlbGV2ZXBsdWllLXNlYXJjaHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjsgXHJcbn1cclxuXHJcbi5uZy12YWxpZCB7IGJvcmRlci1jb2xvcjogZ3JlZW47IH1cclxuLm5nLWludmFsaWQgeyBib3JkZXItY29sb3I6IHJlZDsgfSAgICBcclxuIl19 */"
 
 /***/ }),
 
@@ -1355,7 +1358,7 @@ var SearchRelevepluieComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -1556,8 +1559,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-//import { environment } from 'environments/environment.prod';
 //const endpoint = environment.apiUrl;
+// const endpoint = environment.apiUrl + '/pluvio/';
 var endpoint = '/pluvio/';
 var httpOptions = {
     headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -1643,6 +1646,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
+    apiUrl: ''
 };
 /*
  * In development mode, for easier debugging, you can ignore zone related error
