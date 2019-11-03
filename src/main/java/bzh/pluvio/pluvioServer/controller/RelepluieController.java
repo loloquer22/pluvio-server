@@ -161,27 +161,19 @@ public class RelepluieController {
 		return reTMY;
 	}
 	
-	@PutMapping(value = "updateRelevepluie")
+	@PutMapping(value = "/updateRelevepluie" , produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Relevepluie> putRelevepluie(@RequestBody Relevepluie relevepluie){ 
 		logger.info(" ** update relevepluie for id= " + relevepluie.getId()  +  " modify by value= " + relevepluie.getValeur() );
 		
 		long id =  relevepluie.getId();
-		float valeur = relevepluie.getValeur();
-	
+
 		Optional<Relevepluie> relevepluieData = repository.findById(id);
-		
 		logger.info(" ** find id relevepluieData **" + relevepluieData);
 		if ( relevepluieData.isPresent()) {
-		
 		Relevepluie releve = relevepluieData.get();
-		releve.setDate(relevepluie.getDate());
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(relevepluie.getDate());
-		releve.setJour(cal.get(Calendar.DAY_OF_MONTH));
-		releve.setMois(cal.get(Calendar.MONTH)+1);
-		releve.setAnnee(cal.get(Calendar.YEAR));
+
 		releve.setValeur(relevepluie.getValeur());
-			logger.info(" ** update value : " + valeur + " for id : " + id);
+	logger.info(" ** update value : " + relevepluie.getValeur() + " for id : " + id);
 		return  new ResponseEntity<>(repository.save(releve), HttpStatus.OK);
 		}else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
