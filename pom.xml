@@ -5,7 +5,7 @@
 
 	<groupId>com.javasampleapproach</groupId>
 	<artifactId>pluvio-server</artifactId>
-	<version>0.0.5T</version>
+	<version>0.0.5</version>
 	<packaging>jar</packaging>
 
 	<name>Pluvio-server</name>
