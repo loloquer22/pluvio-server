@@ -9,7 +9,9 @@ import bzh.pluvio.pluvioServer.model.LastValue;
 @Repository
 public interface RelevePluieLastValueRepository extends CrudRepository<LastValue, Long> {
 
-	@Query(value="SELECT id, date, valeur	FROM relevepluie ORDER BY id DESC LIMIT 1", nativeQuery=true)
+	@Query(value="SELECT id, date, valeur FROM relevepluie ORDER BY id DESC LIMIT 1", nativeQuery=true)
 	LastValue getLastValueRelevepluies();
+	
+	
 	
 }

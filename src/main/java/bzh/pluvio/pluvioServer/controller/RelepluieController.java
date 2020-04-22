@@ -28,11 +28,13 @@ import org.springframework.web.bind.annotation.RestController;
 import bzh.pluvio.pluvioServer.model.ListYears;
 import bzh.pluvio.pluvioServer.model.Relevepluie;
 import bzh.pluvio.pluvioServer.model.RelevepluieByDate;
+import bzh.pluvio.pluvioServer.model.RelevepluieNbrDayRain;
 import bzh.pluvio.pluvioServer.model.TotalByMonthByYear;
 import bzh.pluvio.pluvioServer.model.ValueByDayForMonthByYear;
 import bzh.pluvio.pluvioServer.model.ValuesByYear;
 import bzh.pluvio.pluvioServer.repo.ListYearRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieByDateRepository;
+import bzh.pluvio.pluvioServer.repo.RelevepluieNbrDayRainRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieRepository;
 import bzh.pluvio.pluvioServer.repo.TotalByMonthByYearRepository;
 import bzh.pluvio.pluvioServer.repo.ValueByDayForMonthByYearRepository;
@@ -66,6 +68,8 @@ public class RelepluieController {
 	@Autowired
 	private ValueByDayForMonthByYearRepository valueByDayForMonthByYearRepository;
 	
+	@Autowired
+	private RelevepluieNbrDayRainRepository relevepluieNbrDayRainRepository;
 
 	@GetMapping(value = "/relevepluie", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Relevepluie> getAll() {
@@ -188,5 +192,29 @@ public class RelepluieController {
 		repository.deleteById(id);
 	}
 
+	@GetMapping(value = "/getNbrDayTotalRain/{mois}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<RelevepluieNbrDayRain>> getRelevepluieNbrDayRain( @PathVariable int mois) throws ParseException {
+		logger.info(" ** send  mois : " + mois );
+		List<RelevepluieNbrDayRain> valueRelevepluieNbrDayRain = relevepluieNbrDayRainRepository.getRelevepluieNbrDayRain(mois);
+		logger.info(" ** valueRelevepluieNbrDayRain size :" + valueRelevepluieNbrDayRain.size() );
+		ResponseEntity<List<RelevepluieNbrDayRain>> respRelevepluieNbrDayRain= new ResponseEntity<List<RelevepluieNbrDayRain>>(valueRelevepluieNbrDayRain,HttpStatus.OK);
+		logger.info(" ** respRelevepluieNbrDayRain : " + respRelevepluieNbrDayRain.toString());
+		return respRelevepluieNbrDayRain;
+	}
+	
+	
+//	@GetMapping(value = "/getRelevepluieNbrDayRain", produces = MediaType.APPLICATION_JSON_VALUE)
+//	public ResponseEntity<List<RelevepluieNbrDayRain>> getRelevepluieNbrDayRain(Model model) throws ParseException {
+//		List<RelevepluieNbrDayRain> valueRelevepluieNbrDayRainData = relevepluieNbrDayRainRepository.getRelevepluieNbrDayRain();
+//		logger.info(" ** valueRelevepluieNbrDayRainData  :" + valueRelevepluieNbrDayRainData );
+//		
+//		model.addAttribute("listRelevepluieNbrDayRain", valueRelevepluieNbrDayRainData);
+//		logger.debug(" ** listRelevepluieNbrDayRain" + valueRelevepluieNbrDayRainData );
+//		
+//		ResponseEntity<List<RelevepluieNbrDayRain>> listRelevepluieNbrDayRainData= new ResponseEntity<List<RelevepluieNbrDayRain>>(valueRelevepluieNbrDayRainData, HttpStatus.OK);
+////		ResponseEntity<RelevepluieNbrDayRain> respRelevepluieNbrDayRain= new ResponseEntity<RelevepluieNbrDayRain>(valueRelevepluieNbrDayRain, HttpStatus.OK);
+////		return respRelevepluieNbrDayRain;
+//		return null;
+//	}
 	
 }
