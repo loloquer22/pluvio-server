@@ -53,7 +53,7 @@ public class RelevepluieByDate {
 	
 	@Override
 	public String toString() {
-		System.out.println("****  valeur "+ valeur);
+//		System.out.println("****  valeur "+ valeur);
 		return String.format("RelevepluieByDate[id='%s',date='%s',valeur='%f.1' ]",id , date, valeur);
 	}
 

@@ -7,19 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "relevepluie") 
+//@Table(name = "relevepluie") 
 public class RelevepluieNbrDayRain {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	
 	private int annee;
 	private int mois;
+//	private int valeur;
 	private int nbrdays;
 	
 	public RelevepluieNbrDayRain() {}
 
-	
+	@Id
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	public int getAnnee() {
 		return annee;
 	}
@@ -44,6 +43,20 @@ public class RelevepluieNbrDayRain {
 
 	public void setNbrdays(int nbrdays) {
 		this.nbrdays = nbrdays;
+	}
+
+//	public int getValeur() {
+//		return valeur;
+//	}
+//
+//	public void setValeur(int valeur) {
+//		this.valeur = valeur;
+//	}
+	
+	@Override
+	public String toString() {
+//		System.out.println("****  valeur "+ nbrdays);
+		return String.format("RelevePluieLastValue[anne='%s', mois='%s',nbrdays='%s' ]", annee, mois, nbrdays);
 	}
 
 }

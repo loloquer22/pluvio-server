@@ -5,9 +5,11 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,13 +73,14 @@ public class RelepluieController {
 	@Autowired
 	private RelevepluieNbrDayRainRepository relevepluieNbrDayRainRepository;
 
+	@SuppressWarnings("unchecked")
 	@GetMapping(value = "/relevepluie", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Relevepluie> getAll() {
-		List<Relevepluie> list = new ArrayList<>();
+		List<Relevepluie> list = new ArrayList<Relevepluie>();
 		Iterable<Relevepluie> relevepluies = repository.findAll();
 
 		relevepluies.forEach(list::add);
-		logger.info(" ** relevepluie : "+ relevepluies);
+	    logger.info(" ** relevepluie : "+ relevepluies);
 		
 		return list;
 	}
@@ -104,6 +107,7 @@ public class RelepluieController {
 		releve.setMois(cal.get(Calendar.MONTH)+1);
 		releve.setAnnee(cal.get(Calendar.YEAR));
 		releve.setValeur(relevepluie.getValeur());
+		logger.info(" ** update value : " + relevepluie.getValeur() );
 		
 		repository.save(releve);
 		return relevepluie;
@@ -178,9 +182,9 @@ public class RelepluieController {
 
 		releve.setValeur(relevepluie.getValeur());
 	logger.info(" ** update value : " + relevepluie.getValeur() + " for id : " + id);
-		return  new ResponseEntity<>(repository.save(releve), HttpStatus.OK);
+		return  new ResponseEntity<Relevepluie>(repository.save(releve), HttpStatus.OK);
 		}else {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Relevepluie>(HttpStatus.NOT_FOUND);
 		}
 	}
 	
@@ -198,7 +202,7 @@ public class RelepluieController {
 		List<RelevepluieNbrDayRain> valueRelevepluieNbrDayRain = relevepluieNbrDayRainRepository.getRelevepluieNbrDayRain(mois);
 		logger.info(" ** valueRelevepluieNbrDayRain size :" + valueRelevepluieNbrDayRain.size() );
 		ResponseEntity<List<RelevepluieNbrDayRain>> respRelevepluieNbrDayRain= new ResponseEntity<List<RelevepluieNbrDayRain>>(valueRelevepluieNbrDayRain,HttpStatus.OK);
-		logger.info(" ** respRelevepluieNbrDayRain : " + respRelevepluieNbrDayRain.toString());
+//		logger.info(" ** respRelevepluieNbrDayRain : " + respRelevepluieNbrDayRain);
 		return respRelevepluieNbrDayRain;
 	}
 	

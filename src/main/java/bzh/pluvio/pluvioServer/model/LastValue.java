@@ -41,8 +41,7 @@ public class LastValue {
 	
 	@Override
 	public String toString() {
-		System.out.println("****  valeur "+ valeur);
-		return String.format("RelevePluieLastValue[date='%s',valeur='%f' ]", date, valeur);
+		return String.format("RelevePluieLastValue[date='%s',valeur='%s' ]", date, valeur);
 	}
 
 }
