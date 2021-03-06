@@ -15,7 +15,7 @@ public class ValueByDayForMonthByYear {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int jour;
 	private int mois;
-	private int valeur;
+	private float valeur;
 	
 	
 	public ValueByDayForMonthByYear() {}
@@ -39,16 +39,16 @@ public class ValueByDayForMonthByYear {
 	public void setJour(int jour) {
 		this.jour = jour;
 	}
-	public int getValeur() {
+	public float getValeur() {
 		return valeur;
 	}
-	public void setValeur(int valeur) {
+	public void setValeur(float valeur) {
 		this.valeur = valeur;
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("ValueByDayForMonthByYear[annee='%s',mois='%s',jour='%s',valeur='%s' ]",annee, mois, jour, valeur);
+		return String.format("ValueByDayForMonthByYear[annee='%s',mois='%s',jour='%s',valeur='%f.1' ]",annee, mois, jour, valeur);
 	}
 
 }

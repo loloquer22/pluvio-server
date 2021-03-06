@@ -6,7 +6,7 @@
 
 	<groupId>com.javasampleapproach</groupId>
 	<artifactId>pluvio-server</artifactId>
-	<version>0.0.7-SNAPSHOT</version>
+	<version>0.0.8</version>
 	<packaging>jar</packaging>
 
 	<name>Pluvio-server</name>
@@ -34,6 +34,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			       <exclusions>
+            <exclusion>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-logging</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
 
 		<dependency>
@@ -91,7 +101,8 @@
 							<outputDirectory>${basedir}/target/classes/static/</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/src/main/static/pluvio-client</directory>
+								<directory>C:\Users\ALQI6492\workspace-photon\pluvio-client-auto/dist/pluvio-client</directory>
+<!-- 								<directory>${basedir}/../pluvio-auto-client/dist/pluvio-client</directory> -->
 									<filtering>true</filtering>
 								</resource>
 							</resources>
