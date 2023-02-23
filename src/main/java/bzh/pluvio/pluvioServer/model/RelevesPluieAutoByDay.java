@@ -1,13 +1,10 @@
 package bzh.pluvio.pluvioServer.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "relevepluieauto")
