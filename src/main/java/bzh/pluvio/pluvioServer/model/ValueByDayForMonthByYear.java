@@ -17,7 +17,6 @@ public class ValueByDayForMonthByYear {
 	private int mois;
 	private float valeur;
 	
-	
 	public ValueByDayForMonthByYear() {}
 	
 	public int getAnnee() {
@@ -48,7 +47,7 @@ public class ValueByDayForMonthByYear {
 	
 	@Override
 	public String toString() {
-		return String.format("ValueByDayForMonthByYear[annee='%s',mois='%s',jour='%s',valeur='%f.1' ]",annee, mois, jour, valeur);
+		return String.format("ValueByDayForMonthByYear[annee='%s',mois='%s',jour='%s',valeur='%f.1']",annee, mois, jour, valeur);
 	}
 
 }

@@ -11,8 +11,11 @@ import bzh.pluvio.pluvioServer.model.RelevepluieNbrDayRain;
 
 @Repository
 public interface RelevepluieNbrDayRainRepository extends CrudRepository<RelevepluieNbrDayRain, Long> {
+	
+	@Query(value="SELECT annee, mois, count(*) AS nbrdays, SUM(valeur) AS quantityRain FROM relevepluie WHERE valeur>0.1 AND mois=:mois GROUP BY mois, annee", nativeQuery=true)
 
-	@Query(value="SELECT annee, mois, count(*) AS nbrdays FROM relevepluie WHERE valeur>0.1 AND mois=:mois GROUP BY mois, annee", nativeQuery=true)
+//	@Query(value="SELECT annee, mois, count(*) AS nbrdays FROM relevepluie WHERE valeur>0.1 AND mois=:mois GROUP BY mois, annee", nativeQuery=true)
+	
 	
 	List<RelevepluieNbrDayRain> getRelevepluieNbrDayRain(@Param("mois") int mois);
 	

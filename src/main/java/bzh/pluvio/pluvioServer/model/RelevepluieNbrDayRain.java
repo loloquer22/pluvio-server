@@ -12,6 +12,8 @@ public class RelevepluieNbrDayRain {
 //	private int valeur;
 	private int nbrdays;
 	
+	private float quantityrain;
+	
 	public RelevepluieNbrDayRain() {}
 
 	@Id
@@ -41,6 +43,14 @@ public class RelevepluieNbrDayRain {
 	public void setNbrdays(int nbrdays) {
 		this.nbrdays = nbrdays;
 	}
+	
+		public float getQuantityrain() {
+			return quantityrain;
+		}
+
+		public void setQuantityrain(float quantityrain) {
+			this.quantityrain = quantityrain;
+		}
 
 //	public int getValeur() {
 //		return valeur;
@@ -53,7 +63,7 @@ public class RelevepluieNbrDayRain {
 	@Override
 	public String toString() {
 //		System.out.println("****  valeur "+ nbrdays);
-		return String.format("RelevePluieLastValue[anne='%s', mois='%s',nbrdays='%s' ]", annee, mois, nbrdays);
+		return String.format("RelevePluieLastValue[anne='%s', mois='%s',nbrdays='%s',quantityrain='%f.1']", annee, mois, nbrdays, quantityrain);
 	}
 
 }
