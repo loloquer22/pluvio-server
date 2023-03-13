@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import bzh.pluvio.pluvioServer.model.ListYears;
+import bzh.pluvio.pluvioServer.model.MaxRainValue;
 import bzh.pluvio.pluvioServer.model.Relevepluie;
 import bzh.pluvio.pluvioServer.model.RelevepluieByDate;
 import bzh.pluvio.pluvioServer.model.RelevepluieNbrDayRain;
@@ -36,7 +37,9 @@ import bzh.pluvio.pluvioServer.model.RelevesPluieAutoByHour;
 import bzh.pluvio.pluvioServer.model.TotalByMonthByYear;
 import bzh.pluvio.pluvioServer.model.ValueByDayForMonthByYear;
 import bzh.pluvio.pluvioServer.model.ValuesByYear;
+import bzh.pluvio.pluvioServer.repo.LastValueRepository;
 import bzh.pluvio.pluvioServer.repo.ListYearRepository;
+import bzh.pluvio.pluvioServer.repo.MaxRainValueRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieByDateRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieNbrDayRainRepository;
 import bzh.pluvio.pluvioServer.repo.RelevepluieRepository;
@@ -60,8 +63,8 @@ public class RelepluieController {
 	@Autowired
 	private ValuesByYearRepository valuesByYearRepository;
 
-//	@Autowired
-//	private LastValueRepository lastValueRepository;
+	@Autowired
+	private LastValueRepository lastValueRepository;
 
 	@Autowired
 	private ListYearRepository listYearRepository;
@@ -83,6 +86,9 @@ public class RelepluieController {
 
 	@Autowired
 	private RelevesAutoByHourRepository relevesAutoByHourRepository;
+	
+	@Autowired
+	private MaxRainValueRepository maxRainValueRepository;
 
 
 	@GetMapping(value = "/relevepluie", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -132,9 +138,9 @@ public class RelepluieController {
 	@GetMapping(value = "/lastValueRelevepluie", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Relevepluie getLastValueRelevepluies(Model model) {
 
-		Relevepluie lastValue = repository.getLastValueRelevepluies();
-		LOGGER.info(" ** lastValueRelevepluie : " + lastValue);
-		model.addAttribute("Relevepluie", lastValue);
+		Relevepluie lastValue = lastValueRepository.getLastValueRelevepluies();
+		LOGGER.info(" ** Relevepluie : " + lastValue);
+		model.addAttribute("LastValue", lastValue);
 		return lastValue;
 
 	}
@@ -291,6 +297,16 @@ public class RelepluieController {
 		
 		ResponseEntity<List<RelevesPluieAutoByHour>> 	 respRelevesPluieAutoByHour = new ResponseEntity<List<RelevesPluieAutoByHour>>(hourValue ,HttpStatus.OK);
 		return respRelevesPluieAutoByHour;
+	}
+	
+	@GetMapping(value = "/maxRainValueRelevepluie", produces = MediaType.APPLICATION_JSON_VALUE)
+	public MaxRainValue getMaxRainValueRelevepluie(Model model) {
+
+		MaxRainValue maxRainValue = maxRainValueRepository.getMaxRainValueRelevepluie();
+		LOGGER.info(" ** maxRainValueRelevepluie : " + maxRainValue);
+		model.addAttribute("Relevepluie", maxRainValue);
+		return maxRainValue;
+
 	}
 
 }

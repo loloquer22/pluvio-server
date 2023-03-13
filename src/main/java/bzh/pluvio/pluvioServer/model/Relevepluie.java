@@ -16,7 +16,7 @@ public class Relevepluie implements Serializable {
 
 	private static final long serialVersionUID = -3009157732242241606L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", updatable = false, nullable = false)
 	private long id;
 
@@ -86,11 +86,11 @@ public class Relevepluie implements Serializable {
 		this.valeur = valeur;
 	}
 	
-	public Relevepluie(Date date,  float valeur) {
+	public Relevepluie(Date date, int jour, int mois, int annee,   float valeur) {
 		this.date = date;
-//		this.jour = jour;
-//		this.mois = mois;
-//		this.annee = annee;
+		this.jour = jour;
+		this.mois = mois;
+		this.annee = annee;
 		this.valeur = valeur;
 	}
 
