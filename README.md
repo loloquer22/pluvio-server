@@ -14,3 +14,5 @@ Deploiement sur raspberry
 
 
 Faire un compile et package et copier sur jar sur le serveur 
+
+Deploiement maintenant OMV
