@@ -6,7 +6,7 @@
 
 	<groupId>com.javasampleapproach</groupId>
 	<artifactId>pluvio-server</artifactId>
-	<version>25.03</version>
+	<version>25.10</version>
 	<packaging>jar</packaging>
 
 	<name>Pluvio-server</name>
@@ -105,11 +105,15 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/classes/static/</outputDirectory>
+							<outputDirectory>${basedir}/target/classes/static/</outputDirectory> 
+						<!--	<outputDirectory>${basedir}/src/main/static/pluvio/</outputDirectory> -->
 							<resources>
 								<resource>
-									<directory>C:\Users\ALQI6492\git\pluvio-client-24\pluvio\dist\pluvio</directory>
-<!--									<directory>C:\Users\ALQI6492\workspace-photon\pluvio-client-auto/dist/pluvio-client</directory>-->
+									<!--<directory>${basedir}/src/main/resources/static/pluvio/</directory> -->
+									<!--<directory>${basedir}/src/main/static/pluvio/</directory>-->
+									<!--<directory>C:\Users\ALQI6492\git\pluvio-client-25\pluvio\dist\pluvio\browser</directory> -->
+									<directory>C:\Users\ALQI6492\git\pluvio-client-11-2025\pluvio\dist\pluvio\browser</directory>
+									<!--<directory>C:\Users\ALQI6492\workspace-photon\pluvio-client-auto/dist/pluvio-client</directory>-->
 									<!-- <directory>${basedir}/../pluvio-auto-client/dist/pluvio-client</directory> -->
 									<filtering>true</filtering>
 								</resource>
